@@ -26,3 +26,11 @@ def explanation():
                  'to perform such a strategic process by identifying the main '
                  'areas that warrant attention and explicit strategic decisions '
                  'through development of various possible scenario designs.')
+
+
+def external():
+    with st.container():
+        st.write('Define up to 5 external significant factors that affects'
+                 'the organization:')
+        st.text_input('1.')
+
