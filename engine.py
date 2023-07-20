@@ -24,4 +24,4 @@ def explanation():
                  'a proactive decision-making process.\nThis '
                  'App is intended to assist any organization, public or private, '
                  'to perform a basic strategic process by identifying the main '
-                 'areas that warrant attention and explicit strategic decisions')
+                 'areas that warrant attention and explicit strategic decisions.')
