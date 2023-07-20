@@ -13,3 +13,12 @@ def home_title():
                 f'</b></span>'
                 , unsafe_allow_html=True)
     st.markdown('___')
+
+
+def explanation():
+    with st.container():
+        st.write('Strategic planning is the cornerstone of any organizations '
+                 'attempt to prepare for and embrace the opportunities and challenges '
+                 'of the future. This significant process enables the stakeholders '
+                 'to define strategic goals, identify possible paths and facilitate '
+                 'a proactive decision-making process.')
