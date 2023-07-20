@@ -21,6 +21,7 @@ def explanation():
                  'attempt to prepare for and embrace the opportunities and challenges '
                  'of the future. This significant process enables the stakeholders '
                  'to define strategic goals, identify possible paths and facilitate '
-                 'a proactive decision-making process.\n'
-                 'This App is intended to assist any organization, public or private, '
-                 'to perform a  planning process  ')
+                 'a proactive decision-making process.')
+        st.write('This App is intended to assist any organization, public or private, '
+                 'to perform a basic strategic process by identifying the main '
+                 'areas that warrant attention and explicit strategic decisions')
