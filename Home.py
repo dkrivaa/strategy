@@ -5,5 +5,4 @@ import engine
 
 engine.home_title()
 
-engine.explanation()
 
