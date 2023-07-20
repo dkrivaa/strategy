@@ -28,7 +28,7 @@ def explanation():
                  'through development of various possible scenario designs.')
 
 
-def external():
+def external_variables():
     with st.container():
         st.write('Define up to 5 external significant factors that affects'
                  'the organization:')

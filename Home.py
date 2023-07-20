@@ -5,4 +5,4 @@ import engine
 
 engine.home_title()
 
-
+engine.external_variables()
