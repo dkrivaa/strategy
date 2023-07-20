@@ -7,7 +7,7 @@ def home_title():
     st.markdown(f'<span style="color: #18448c; '
                 f'font-size: 32px"><b>Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
-    st.markdown(f'<span style="color: #1f66db; '
+    st.markdown(f'<span style="color: #ed7011; '
                 f'font-size: 18px"><b>Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
     st.markdown('___')
