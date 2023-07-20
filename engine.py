@@ -32,7 +32,7 @@ def external_variables():
     with st.container():
         st.write('Define up to 5 external significant factors that affects'
                  'the organization:')
-        st.text_input('# 1', key='ex_var1')
-        st.text_input('# 2', key='ex_var2')
+        st.text_input('# 1.', key='ex_var1')
+        st.text_input('# 2.', key='ex_var2')
 
 
