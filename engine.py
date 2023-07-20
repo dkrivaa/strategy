@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def home_title():
-    st.set_page_config(page_title='Strategy',
+    st.set_page_config(page_title='Strateg',
                        layout='wide',
                        page_icon=':Globe:')
     st.markdown(f'<span style="color: #18448c; font-size: 32px"><b>Strategic Planning</b></span>'
