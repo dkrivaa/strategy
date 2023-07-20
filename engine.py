@@ -23,5 +23,5 @@ def explanation():
                  'to define strategic goals, identify possible paths and facilitate '
                  'a proactive decision-making process.\nThis '
                  'App is intended to assist any organization, public or private, '
-                 'to perform a basic strategic process by identifying the main '
+                 'to perform such a strategic process by identifying the main '
                  'areas that warrant attention and explicit strategic decisions.')
