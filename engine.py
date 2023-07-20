@@ -8,4 +8,5 @@ def home_title():
     st.markdown(f'<span style="color: #18448c; '
                 f'font-size: 32px"><b>Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
+    st.write('Failing to plan is planning to fail')
     st.markdown('___')
