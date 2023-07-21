@@ -68,16 +68,18 @@ def data_input():
 
         st.form_submit_button('**Continue**')
 
-    e_var = []
-    e_var_sig = []
-    e_var_prob = []
-    for i in range(0, 5):
-        e_var.append('e_var' + str(i))
-        e_var_sig.append(('e_var' + str(i) + '_sig'))
-        e_var_prob.append(('e_var' + str(i) + '_prob'))
-    dfe = pd.DataFrame({'e_var': e_var, 'e_var_sig': e_var_sig, 'e_var_prob': e_var_prob})
 
-    return dfe
+    st.write(e_var1)
+    # e_var = []
+    # e_var_sig = []
+    # e_var_prob = []
+    # for i in range(0, 5):
+    #     e_var.append('e_var' + str(i))
+    #     e_var_sig.append(('e_var' + str(i) + '_sig'))
+    #     e_var_prob.append(('e_var' + str(i) + '_prob'))
+    # dfe = pd.DataFrame({'e_var': e_var, 'e_var_sig': e_var_sig, 'e_var_prob': e_var_prob})
+    #
+    # st.write(dfe)
 
 def upload_file():
     with st.container():
