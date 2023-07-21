@@ -12,19 +12,10 @@ def home_title():
                 , unsafe_allow_html=True)
 
 
-
 def icon():
-    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-128.png'
+    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
+          'jigsaws-puzzle_pieces-planning-creative-strategy-128.png'
     return url
-
-def page_title():
-    url = icon()
-    st.image(url)
-    st.markdown(f'<span style="color: #18448c; '
-                f'font-size: 32px"><b>StraApp - Strategic Planning</b></span>'
-                , unsafe_allow_html=True)
-
-
 
 
 def explanation():
@@ -33,7 +24,7 @@ def explanation():
                  'attempt to prepare for and embrace the opportunities and challenges '
                  'of the future. This significant process enables stakeholders '
                  'to define strategic goals, identify possible paths and facilitate '
-                 'a proactive decision-making process.\nThis '
+                 'a proactive decision-making process. This '
                  'App is intended to assist any organization, public or private, '
                  'to perform such a strategic process by:'
                  )
