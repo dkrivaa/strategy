@@ -8,6 +8,8 @@ st.markdown(f'<span style="color: #ed7011; '
             f'About'
             f'</b></span>'
             , unsafe_allow_html=True)
+st.markdown('___')
+
 
 engine.explanation()
 
