@@ -2,7 +2,7 @@ import streamlit as st
 
 
 def home_title():
-    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-256.png'
+    url = icon()
     st.set_page_config(page_title='StraApp',
                        layout='wide',
                        page_icon=url)
@@ -16,6 +16,14 @@ def home_title():
                 f'</b></span>'
                 , unsafe_allow_html=True)
     st.markdown('___')
+
+
+def icon():
+    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-256.png'
+    return url
+
+def page_title():
+
 
 
 def explanation():
