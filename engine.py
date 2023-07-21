@@ -65,8 +65,8 @@ def data_input():
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
-        data = st.form_submit_button('**Continue**')
-        st.write(data)
+
+        st.form_submit_button('**Continue**')
 
 def upload_file():
     with st.container():
