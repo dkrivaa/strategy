@@ -37,7 +37,7 @@ def explanation():
                  'App is intended to assist any organization, public or private, '
                  'to perform such a strategic process by:  and promote explicit strategic decisions '
                  'through development of various possible scenario designs.')
-        st.markdown('##*##  identifying the main areas that warrant attention')
+        st.markdown('###*###  identifying the main areas that warrant attention')
 
 
 
