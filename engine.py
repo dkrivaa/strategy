@@ -14,7 +14,7 @@ def home_title():
 
 
 def icon():
-    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-64.png'
+    url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-128.png'
     return url
 
 def page_title():
