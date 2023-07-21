@@ -28,7 +28,7 @@ def data_input():
         e_var1_sig = st.select_slider('Significance to organization',
                                       ['low', 'high'])
 
-        st.form_submit_button()
+        st.form_submit_button('continue')
 
 
 def upload_file():
