@@ -2,6 +2,7 @@ import streamlit as st
 
 
 def home_title():
+    # This function sets the generale outlay of page and the top banner
     url = icon()
     st.set_page_config(page_title='StraApp',
                        layout='wide',
