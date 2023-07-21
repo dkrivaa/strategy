@@ -3,7 +3,8 @@ import streamlit as st
 
 def home_title():
     st.set_page_config(page_title='StraApp',
-                       layout='wide',)
+                       layout='wide',
+                       page_icon='https://cdn4.iconfinder.com/data/icons/success-filloutline/64/jigsaws-puzzle_pieces-planning-creative-strategy-256.png')
     st.markdown(f'<span style="color: #18448c; '
                 f'font-size: 32px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
