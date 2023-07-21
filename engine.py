@@ -109,10 +109,10 @@ def data_input1():
 
     num = st.session_state.num
 
-    parameter = st.text_input(f'**parameter {num +1}**', key=num+1)
-    significance = st.radio('**Significance to organization**',
+    parameter = st.text_input(f'parameter {num +1}', key=num+1)
+    significance = st.radio('Significance to organization',
                             ['low', 'average', 'above average', 'high'],
                             index=3, horizontal=True, key=num+10)
-    probability = st.slider('**probability**', min_value=0, max_value=100,
+    probability = st.slider('probability', min_value=0, max_value=100,
                             step=5, value=(45, 55), key=num+100)
 
