@@ -22,7 +22,7 @@ def icon():
 def data_input():
     # This function enables the user to enter data
     with st.form('your_parameters'):
-        st.write('5 **external** parameters')
+        st.write('**EXTERNAL** parameters')
 
         e_var1 = st.text_input('#1.')
         e_var1_sig = st.radio('Significance to organization',
