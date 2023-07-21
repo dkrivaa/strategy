@@ -22,7 +22,7 @@ def icon():
 def data_input():
     # This function enables the user to enter data
     with st.form('Your Parameters'):
-        e_var1= st.text_input('#1.')
+        e_var1 = st.text_input('#1.')
 
 
 def upload_file():
