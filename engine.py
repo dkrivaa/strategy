@@ -19,7 +19,17 @@ def icon():
     return url
 
 
+
+
+
+def upload_file():
+    with st.container():
+        user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
+                                     type=['xlsx', 'csv'])
+
+
 def explanation():
+    # This function presents the info on the 'About' page
     with st.container():
         st.write('Strategic planning is the cornerstone of any organizations '
                  'attempt to prepare for and embrace the opportunities and challenges '
@@ -32,11 +42,3 @@ def explanation():
         st.write('*  identifying the main areas that warrant attention')
         st.write('* develop possible scenario designs')
         st.write('* promote explicit strategic decisions')
-
-
-def upload_file():
-    with st.container():
-        user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
-                                     type=['xlsx', 'csv'])
-
-
