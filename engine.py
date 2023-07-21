@@ -64,7 +64,7 @@ def data_input():
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
-        st.form_submit_button('Continue')
+        st.form_submit_button('**Continue**')
 
 
 def upload_file():
