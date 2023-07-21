@@ -2,7 +2,7 @@ import streamlit as st
 
 import engine
 
-engine.page_title()
+engine.home_title()
 st.markdown(f'<span style="color: #ed7011; '
             f'font-size: 18px"><b>'
             f'About'
