@@ -34,17 +34,6 @@ def explanation():
         st.write('* promote explicit strategic decisions')
 
 
-def external_variables():
-    # This function gets up to 5 external factors that significantly affects '
-    #                  'the organizations ability to execute its mission statement
-    with st.container():
-        st.write('Define up to 5 external factors that significantly affects '
-                 'the organizations ability to execute its mission statement:')
-        # st.text_input('#1', key='ext_var1')
-        # st.text_input('#2', key='ext_var2')
-        # st.text_input('#3', key='ext_var3')
-
-
 def upload_file():
     with st.container():
         user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
