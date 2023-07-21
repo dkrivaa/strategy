@@ -41,6 +41,5 @@ def external_variables():
 
 def upload_file():
     st.file_uploader('upload your file')
-    st.download_button('test')
 
 
