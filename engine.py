@@ -8,7 +8,7 @@ def home_title():
                        page_icon=url)
     st.image(url)
     st.markdown(f'<span style="color: #18448c; '
-                f'font-size: 32px"><b>StraApp - Strategic Planning</b></span>'
+                f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
 
 
