@@ -23,7 +23,8 @@ def icon():
 def data_input():
     # This function enables the user to enter data -
     # external and internal variables affecting the organization
-    with st.form('external_vars'):
+    e_form = st.form('external_vars')
+    with e_form:
         st.write('**EXTERNAL** parameters')
 
         e_var1 = st.text_input('**#1**.')
@@ -66,8 +67,8 @@ def data_input():
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
-        dfe = pd.DataFrame(st.form_submit_button('**Continue**'))
-
+        st.form_submit_button('**Continue**')
+    dfe = pd.DataFrame(e_form)
 
     # e_var = []
     # e_var_sig = []
