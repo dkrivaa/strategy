@@ -68,7 +68,7 @@ def data_input():
         st.markdown('___')
 
         st.form_submit_button('**Continue**')
-    st.write(e_form)
+    st.write(type(e_form))
     # e_var = []
     # e_var_sig = []
     # e_var_prob = []
