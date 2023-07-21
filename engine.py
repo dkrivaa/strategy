@@ -23,6 +23,7 @@ def icon():
     return url
 
 def page_title():
+    pass
 
 
 
