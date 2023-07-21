@@ -39,5 +39,6 @@ def external_variables():
         # st.text_input('#3', key='ext_var3')
 
 
-
+def upload_file():
+    st.file_uploader('upload your file')
 
