@@ -68,8 +68,7 @@ def data_input():
         st.markdown('___')
 
         st.form_submit_button('**Continue**')
-    dfe = pd.DataFrame(e_form)
-
+    st.write(e_form)
     # e_var = []
     # e_var_sig = []
     # e_var_prob = []
@@ -79,7 +78,6 @@ def data_input():
     #     e_var_prob.append(('e_var' + str(i) + '_prob'))
     # dfe = pd.DataFrame({'e_var': e_var, 'e_var_sig': e_var_sig, 'e_var_prob': e_var_prob})
 
-    st.write(dfe)
 
 def upload_file():
     with st.container():
