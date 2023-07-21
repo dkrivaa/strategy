@@ -19,7 +19,10 @@ def icon():
     return url
 
 
-
+def data_input():
+    # This function enables the user to enter data
+    with st.form('Your Parameters'):
+        e_var1= st.text_input('#1.')
 
 
 def upload_file():
@@ -39,6 +42,6 @@ def explanation():
                  'App is intended to assist any organization, public or private, '
                  'to perform such a strategic process by:'
                  )
-        st.write('*  identifying the main areas that warrant attention')
+        st.write('* identifying the main areas that warrant attention')
         st.write('* develop possible scenario designs')
         st.write('* promote explicit strategic decisions')
