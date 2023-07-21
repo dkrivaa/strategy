@@ -24,6 +24,8 @@ def data_input():
     with st.form('Your Parameters'):
         e_var1 = st.text_input('#1.')
 
+        st.form_submit_button()
+
 
 def upload_file():
     with st.container():
