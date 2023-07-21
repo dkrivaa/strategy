@@ -33,7 +33,6 @@ def explanation():
         st.write('* promote explicit strategic decisions')
 
 
-
 def external_variables():
     # This function gets up to 5 external factors that significantly affects '
     #                  'the organizations ability to execute its mission statement
