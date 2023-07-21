@@ -6,7 +6,7 @@ def home_title():
     st.set_page_config(page_title='StraApp',
                        layout='wide',
                        page_icon=url)
-    st.markdown(url)
+    st.image(url)
     st.markdown(f'<span style="color: #18448c; '
                 f'font-size: 32px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
