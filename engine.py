@@ -40,6 +40,6 @@ def external_variables():
 
 
 def upload_file():
-    st.file_uploader('Upload your file (xlsx or csv)', type=['xlsx', 'csv'])
+    st.file_uploader('Upload your file (.xlsx or .csv)', type=['xlsx', 'csv'])
 
 
