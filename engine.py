@@ -34,9 +34,10 @@ def external_variables():
     with st.container():
         st.write('Define up to 5 external factors that significantly affects '
                  'the organizations ability to execute its mission statement:')
-        st.text_input('#1', key='ext_var1')
-        st.text_input('#2', key='ext_var2')
-        st.text_input('#3')
+        # st.text_input('#1', key='ext_var1')
+        # st.text_input('#2', key='ext_var2')
+        # st.text_input('#3', key='ext_var3')
+
 
 
 
