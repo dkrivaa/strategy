@@ -28,42 +28,42 @@ def data_input():
         st.write('**EXTERNAL** parameters')
 
         e_var1 = st.text_input('**#1**.')
-        e_var1_sig = st.radio('**Significance to organization**',
+        e_sig1 = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               index=3, horizontal=True, key='evar1')
-        e_var1_prob = st.slider('**probability**', min_value=0, max_value=100,
+        e_prob1 = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key='s_evar1')
         st.markdown('___')
 
         e_var2 = st.text_input('**#2**.')
-        e_var2_sig = st.radio('**Significance to organization**',
+        e_sig2 = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               index=3, horizontal=True, key='evar2')
-        e_var2_prob = st.slider('**probability**', min_value=0, max_value=100,
+        e_prob2 = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key='s_evar2')
         st.markdown('___')
 
         e_var3 = st.text_input('**#3**.')
-        e_var3_sig = st.radio('**Significance to organization**',
+        e_sig3 = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               index=3, horizontal=True, key='evar3')
-        e_var3_prob = st.slider('**probability**', min_value=0, max_value=100,
+        e_prob3 = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key='s_evar3')
         st.markdown('___')
 
         e_var4 = st.text_input('**#4**.')
-        e_var4_sig = st.radio('**Significance to organization**',
+        e_sig4 = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               index=3, horizontal=True, key='evar4')
-        e_var4_prob = st.slider('**probability**', min_value=0, max_value=100,
+        e_prob4 = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key='s_evar4')
         st.markdown('___')
 
         e_var5 = st.text_input('**#5**.')
-        e_var5_sig = st.radio('**Significance to organization**',
+        e_sig5 = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               index=3, horizontal=True, key='evar5')
-        e_var5_prob = st.slider('**probability**', min_value=0, max_value=100,
+        e_prob5 = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
