@@ -29,11 +29,12 @@ def explanation():
 
 
 def external_variables():
+    # This function gets up to 5 external factors that significantly affects '
+    #                  'the organizations ability to execute its mission statement
     with st.container():
         st.write('Define up to 5 external factors that significantly affects '
-                 'the organization:')
-        e_var1 = st.text_input('#1', key='ext_var1')
-        e_var2 = st.text_input('#2', key='ext_var2')
-        st.session_state(e_var1, e_var2)
+                 'the organizations ability to execute its mission statement:')
+        st.text_input('#1', key='ext_var1')
+        st.text_input('#2', key='ext_var2')
 
 
