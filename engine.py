@@ -67,8 +67,8 @@ def data_input():
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
-        st.form_submit_button('**Continue**')
-    st.write(type(e_form))
+        st.form_submit_button('Continue', type='primary')
+
     # e_var = []
     # e_var_sig = []
     # e_var_prob = []
