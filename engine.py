@@ -112,7 +112,7 @@ def data_input1():
     parameter = st.text_input('**parameter:**', key=num+1)
     significance = st.radio('**Significance to organization**',
                             ['low', 'average', 'above average', 'high'],
-                            index=3, horizontal=True, key=num+1)
+                            index=3, horizontal=True, key=num+10)
     probability = st.slider('**probability**', min_value=0, max_value=100,
-                            step=5, value=(45, 55), key=num+1)
+                            step=5, value=(45, 55), key=num+100)
 
