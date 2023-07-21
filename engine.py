@@ -35,9 +35,11 @@ def explanation():
                  'to define strategic goals, identify possible paths and facilitate '
                  'a proactive decision-making process.\nThis '
                  'App is intended to assist any organization, public or private, '
-                 'to perform such a strategic process by:  and promote explicit strategic decisions '
-                 'through development of various possible scenario designs.')
-        st.markdown('###*###  identifying the main areas that warrant attention')
+                 'to perform such a strategic process by:'
+                 )
+        st.write('*  identifying the main areas that warrant attention')
+        st.write('* develop possible scenario designs')
+        st.write('* promote explicit strategic decisions')
 
 
 
