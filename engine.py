@@ -29,7 +29,7 @@ def data_input():
                               ['low', 'average', 'above average', 'high'],
                               horizontal=True, key='evar1')
         e_var1_prob = st.slider('**probability**', min_value=0, max_value=100,
-                                step=5, key='evar1')
+                                step=5, value=(45, 55), key='evar1')
         st.markdown('___')
 
         e_var2 = st.text_input('**#2**.')
@@ -45,7 +45,7 @@ def data_input():
                               ['low', 'average', 'above average', 'high'],
                               horizontal=True, key='evar3')
         e_var3_prob = st.slider('**probability**', min_value=0, max_value=100,
-                                step=5, key='evar3')
+                                step=5, value=(45, 55), key='evar3')
         st.markdown('___')
 
         e_var4 = st.text_input('**#4**.')
