@@ -29,7 +29,7 @@ def data_input():
                                       ['low', 'average', 'above average', 'high'])
         e_var1_prob = st.slider('probability', range(0, 100, 10))
 
-        st.form_submit_button('continue')
+        st.form_submit_button()
 
 
 def upload_file():
