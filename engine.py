@@ -21,8 +21,12 @@ def icon():
 
 def data_input():
     # This function enables the user to enter data
-    with st.form('Your Parameters'):
+    with st.form('your_parameters'):
+        st.write('Your EXTERNAL parameters')
+
         e_var1 = st.text_input('#1.')
+        e_var1_sig = st.select_slider('Significance to organization',
+                                      ['low', 'high'])
 
         st.form_submit_button()
 
