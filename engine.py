@@ -24,11 +24,11 @@ def data_input():
     with st.form('your_parameters'):
         st.write('**EXTERNAL** parameters')
 
-        e_var1 = st.text_input('#1.')
-        e_var1_sig = st.radio('Significance to organization',
+        e_var1 = st.text_input('**#1**.')
+        e_var1_sig = st.radio('**Significance to organization**',
                               ['low', 'average', 'above average', 'high'],
                               horizontal=True)
-        e_var1_prob = st.slider('probability', min_value=0, max_value=100,
+        e_var1_prob = st.slider('**probability**', min_value=0, max_value=100,
                                 step=5)
 
         st.form_submit_button('Continue')
