@@ -22,7 +22,7 @@ def icon():
 def data_input():
     # This function enables the user to enter data -
     # external and internal variables affecting the organization
-    with st.form('your_parameters'):
+    with st.form('external_vars'):
         st.write('**EXTERNAL** parameters')
 
         e_var1 = st.text_input('**#1**.')
@@ -65,8 +65,8 @@ def data_input():
                                 step=5, value=(45, 55), key='s_evar5')
         st.markdown('___')
 
-        st.form_submit_button('**Continue**')
-
+        data = st.form_submit_button('**Continue**')
+        st.write(data)
 
 def upload_file():
     with st.container():
