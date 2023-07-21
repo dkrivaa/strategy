@@ -20,7 +20,8 @@ def icon():
 
 
 def data_input():
-    # This function enables the user to enter data
+    # This function enables the user to enter data -
+    # external and internal variables affecting the organization
     with st.form('your_parameters'):
         st.write('**EXTERNAL** parameters')
 
