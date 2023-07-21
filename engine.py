@@ -36,5 +36,7 @@ def external_variables():
                  'the organizations ability to execute its mission statement:')
         st.text_input('#1', key='ext_var1')
         st.text_input('#2', key='ext_var2')
+        st.text_input('#3')
+
 
 
