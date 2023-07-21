@@ -27,7 +27,7 @@ def data_input():
         e_var1 = st.text_input('#1.')
         e_var1_sig = st.select_slider('Significance to organization',
                                       ['low', 'average', 'above average', 'high'])
-        e_var1_prob = st.slider('probability', range(0, 100, 10))
+        e_var1_prob = st.slider('probability', range(0, 100))
         st.form_submit_button()
 
 
