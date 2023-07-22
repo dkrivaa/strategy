@@ -112,7 +112,7 @@ def data_input1():
             'probability_high': prob_h}
     df = pd.DataFrame(data)
 
-    internal()
+    df.loc[len(df)] = internal()
 
     st.write(df)
 
@@ -139,20 +139,17 @@ def internal():
         if st.form_submit_button():
             st.session_state.num += 1
             st.write(st.session_state.num)
-            param.append(parameter)
-            sig.append(significance)
-            prob_l.append(probability[0])
-            prob_h.append(probability[1])
-            new_row = {'parameter': param,
-                       'significance': sig,
-                       'probability_low': prob_l,
-                       'probability_high': prob_h}
-            df.loc[len(df)] = new_row
+            new_row = {'parameter': parameter,
+                       'significance': significance,
+                       'probability_low': probability[0],
+                       'probability_high': probability[1]}
             if st.session_state.num >= 5:
                 st.session_state.num = 0
                 placeholder.empty()
         else:
             st.stop()
+
+        return new_row
 
 
 
