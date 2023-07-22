@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 
 import engine
@@ -16,7 +17,14 @@ st.markdown(f'<span style="color: #ed7011; '
             f'</b></span>'
             , unsafe_allow_html=True)
 
+# Dataframe of external parameters
 dfe = engine.data_external()
+
+if dfe is None:
+    dfe = pd.DataFrame({'parameter': [],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': []})
 
 st.write(dfe)
 
