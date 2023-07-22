@@ -34,6 +34,8 @@ def data_input():
 
     with placeholder.form(key=str(num)):
         st.text_input(f'test{num + 1}')
+        st.slider('test')
+
 
         if st.form_submit_button():
             st.session_state.num += 1
