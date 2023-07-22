@@ -108,8 +108,8 @@ def data_input1():
     sig = []
     prob_l = []
     prob_h = []
-    data = {'parameter': [], 'significance': [], 'probability_low': [],
-            'probability_high': []}
+    data = {'parameter': param, 'significance': sig, 'probability_low': prob_l,
+            'probability_high': prob_h}
     df = pd.DataFrame(data)
 
     if 'num' not in st.session_state:
