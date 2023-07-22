@@ -13,6 +13,8 @@ def home_title():
                 f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
 
+    st.sidebar.header('Navigate')
+
 
 def icon():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
@@ -118,38 +120,38 @@ def data_input1():
 
 
 def internal():
-    # if 'num' not in st.session_state:
-    #     st.session_state.num = 0
-    #
-    # st.write(st.session_state.num)
+    if 'num' not in st.session_state:
+        st.session_state.num = 0
+
+    st.write(st.session_state.num)
 
     placeholder = st.empty()
-    # num = st.session_state.num
+    num = st.session_state.num
 
-    for num in range(0,5):
-        with placeholder.form(key=str(num)):
-            parameter = st.text_input(f'parameter {num +1}', key=num+1)
-            if parameter is None:
-                parameter=0
-            significance = st.radio('Significance to organization',
-                                    ['low', 'average', 'above average', 'high'],
-                                    index=3, horizontal=True, key=num+10)
-            probability = st.slider('probability', min_value=0, max_value=100,
-                                    step=5, value=(45, 55), key=num+100)
+    with placeholder.form(key=str(num)):
+        parameter = st.text_input(f'parameter {num +1}', key=num+1)
+        if parameter is None:
+            parameter=0
+        significance = st.radio('Significance to organization',
+                                ['low', 'average', 'above average', 'high'],
+                                index=3, horizontal=True, key=num+10)
+        probability = st.slider('probability', min_value=0, max_value=100,
+                                step=5, value=(45, 55), key=num+100)
 
-            if st.form_submit_button():
-                num += 1
-                st.write(num)
-                new_row = {'parameter': parameter,
-                           'significance': significance,
-                           'probability_low': probability[0],
-                           'probability_high': probability[1]}
-                if num >= 5:
-                    placeholder.empty()
-            else:
-                st.stop()
-        st.write(num)
-        return new_row
+        if st.form_submit_button():
+            st.session_state.num += 1
+            st.write(num)
+            new_row = {'parameter': parameter,
+                       'significance': significance,
+                       'probability_low': probability[0],
+                       'probability_high': probability[1]}
+            if st.session_state.num >= 5:
+                placeholder.empty()
+        else:
+            st.stop()
+    st.write(num)
+
+    return new_row
 
 
 
