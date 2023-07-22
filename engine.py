@@ -139,11 +139,12 @@ def data_input1():
                        'significance': significance,
                        'probability_low': probability[0],
                        'probability_high': probability[1]}
+            df.loc[len(df)] = new_row
+
             if st.session_state.num >= 5:
                 placeholder.empty()
         else:
             st.stop()
-        df.loc[len(df)] = new_row
         st.write(df)
 
         # st.experimental_rerun()
