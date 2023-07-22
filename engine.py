@@ -198,7 +198,6 @@ def parameters():
     return all_parameters
 
 
-
 def upload_file():
     with st.container():
         user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
