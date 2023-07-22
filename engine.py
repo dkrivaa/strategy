@@ -91,7 +91,7 @@ def data_external():
                                 'significance': significance,
                                 'prob_low': prob_low,
                                 'prob_high': prob_high})
-    return dfe
+            return dfe
 
 
 def upload_file():
