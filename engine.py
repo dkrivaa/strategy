@@ -204,8 +204,8 @@ def parameters():
     dfi = data_internal()
     # dfe_none()
     # dfi_none()
-    all_parameters = pd.concat([dfe, dfi], axis=0)
-    return all_parameters
+    df = pd.concat([dfe, dfi], axis=0)
+    return df
 
 
 def upload_file():

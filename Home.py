@@ -13,9 +13,7 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
-dfe = engine.data_external()
-dfi = engine.data_internal()
-df = pd.concat([dfe, dfi], axis=0)
+df = engine.parameters()
 
 st.write(df)
 engine.upload_file()
