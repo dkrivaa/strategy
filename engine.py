@@ -45,7 +45,7 @@ def data_input():
                 placeholder.empty()
                 sleep(0.01)
 
-                st.write(st.session_state.num)
+            st.write(st.session_state.num)
 
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
