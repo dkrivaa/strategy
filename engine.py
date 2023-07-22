@@ -148,7 +148,7 @@ def internal():
                     placeholder.empty()
             else:
                 st.stop()
-
+        st.write(num)
         return new_row
 
 
