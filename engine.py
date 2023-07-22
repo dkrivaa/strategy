@@ -32,7 +32,7 @@ def data_input():
     placeholder = st.empty()
     num = st.session_state.num
 
-    for _ in range(0, 5):
+    for _ in []:
         with placeholder.form(key=str(num)):
             st.write('test' + str(num))
 
