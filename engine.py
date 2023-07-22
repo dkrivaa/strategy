@@ -42,7 +42,7 @@ def data_input():
             if st.session_state.num >= 5:
                 st.session_state.num = 0
             placeholder.empty()
-        sleep(0.01)
+            sleep(0.01)
 
 
     st.write(st.session_state.num)
