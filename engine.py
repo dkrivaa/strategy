@@ -109,6 +109,7 @@ def data_input1():
 
     placeholder = st.empty()
     num = st.session_state.num
+    num=0
 
     with placeholder.form(key=str(num)):
         parameter = st.text_input(f'parameter {num +1}', key=num+1)
