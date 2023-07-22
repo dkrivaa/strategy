@@ -104,6 +104,10 @@ def explanation():
 
 
 def data_input1():
+    param = []
+    sig = []
+    prob_l = []
+    prob_h = []
     data = {'parameter': [], 'significance': [], 'probability_low': [],
             'probability_high': []}
     df = pd.DataFrame(data)
@@ -129,11 +133,10 @@ def data_input1():
         if st.form_submit_button():
             st.session_state.num += 1
             st.write(st.session_state.num)
-            new_row = {'parameter': parameter,
-                       'significance': significance,
-                       'probability_low': probability[0],
-                       'probability_high': probability[1]}
-            df.loc[len(df)] = new_row
+            param.append(parameter)
+            sig.append(significance)
+            prob_l.append(probability[0])
+            prob_h.append(probability[1])
             if st.session_state.num >= 5:
                 st.session_state.num = 0
                 placeholder.empty()
