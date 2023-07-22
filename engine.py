@@ -40,7 +40,7 @@ def data_input():
             st.session_state.num += 1
             if st.session_state.num >= 5:
                 st.session_state.num = 0
-            # placeholder.empty()
+                placeholder.empty()
         else:
             st.stop()
 
