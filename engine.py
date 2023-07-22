@@ -104,6 +104,9 @@ def explanation():
 
 
 def data_input1():
+    data = {'parameter': [], 'significance': [], 'probability': []}
+    df = pd.DataFrame(data)
+
     if 'num' not in st.session_state:
         st.session_state.num = 0
 
@@ -123,8 +126,9 @@ def data_input1():
         if st.form_submit_button():
             st.session_state.num += 1
             st.write(st.session_state.num)
-            data_dict={'parameter': parameter, 'significance': significance,
+            new_row = {'parameter': parameter, 'significance': significance,
                        'probability': probability}
+            df.loc[len(df)] = new_row
             if st.session_state.num >= 5:
                 st.session_state.num = 0
                 placeholder.empty()
