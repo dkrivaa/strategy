@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+from time import sleep
 
 
 def home_title():
@@ -40,8 +41,9 @@ def data_input():
             st.session_state.num += 1
             if st.session_state.num >= 5:
                 st.session_state.num = 0
-        else:
-            return
+        placeholder.empty()
+        sleep(0.01)
+
 
     st.write(st.session_state.num)
 
