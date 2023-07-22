@@ -43,6 +43,7 @@ def data_input():
                 st.session_state.num = 0
             placeholder.empty()
             sleep(0.01)
+            st.experimental_rerun
 
     st.write(st.session_state.num)
 
