@@ -103,7 +103,6 @@ def explanation():
         st.write('* promote explicit strategic decisions')
 
 
-
 def data_input1():
     data = {'parameter': [], 'significance': [], 'probability_low': [],
             'probability_high': []}
