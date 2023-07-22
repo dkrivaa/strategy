@@ -13,5 +13,7 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
+st.write(st.session_state)
+
 engine.upload_file()
 
