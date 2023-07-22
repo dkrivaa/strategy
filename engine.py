@@ -146,7 +146,7 @@ def internal():
                 placeholder.empty()
         else:
             st.stop()
-    st.write(st.session_state.num)
+    # st.write(st.session_state.num)
 
     return new_row
 
