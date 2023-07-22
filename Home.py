@@ -17,7 +17,6 @@ dfe = engine.data_external()
 dfi = engine.data_internal()
 df = pd.concat([dfe, dfi], axis=0)
 
-
 st.write(df)
 engine.upload_file()
 
