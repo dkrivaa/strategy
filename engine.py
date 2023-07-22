@@ -29,7 +29,7 @@ def data_input():
 
     st.write(st.session_state.num)
 
-    for _, _ in zip([1, 2, 3, 4, 5], [a, b, c, d, e]):
+    for _, _ in zip([1, 2, 3, 4, 5], ['a', 'b', 'c', 'd', 'e']):
 
         placeholder = st.empty()
         num = st.session_state.num
