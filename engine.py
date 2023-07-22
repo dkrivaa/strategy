@@ -33,7 +33,7 @@ def data_input():
     num = st.session_state.num
 
     with placeholder.form(key=str(num)):
-        st.text_input(f'test{num}')
+        st.text_input(f'test{num + 1}')
 
         if st.form_submit_button(on_click=st.experimental_rerun):
             st.session_state.num += 1
