@@ -117,6 +117,7 @@ def data_input1():
 
 
 def internal():
+
     if 'num' not in st.session_state:
         st.session_state.num = 0
 
@@ -148,6 +149,8 @@ def internal():
     st.write(st.session_state.num)
 
     return new_row
+
+
 
 
 
