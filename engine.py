@@ -26,7 +26,7 @@ def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
     with st.form('external_form'):
-        parameter1 = st.text_input(f'parameter #1', key='param1')
+        parameter1 = st.text_input(f'**parameter** #1', key='param1')
         if parameter1 is None:
             parameter = 0
         significance1 = st.radio('Significance to organization',
