@@ -137,6 +137,11 @@ def data_input1():
             sig.append(significance)
             prob_l.append(probability[0])
             prob_h.append(probability[1])
+            new_row = {'parameter': param,
+                       'significance': sig,
+                       'probability_low': prob_l,
+                       'probability_high': prob_h}
+            df.loc[len(df)] = new_row
             if st.session_state.num >= 5:
                 st.session_state.num = 0
                 placeholder.empty()
