@@ -45,6 +45,7 @@ def data_external():
                                  index=3, horizontal=True, key='sig2')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2')
+        st.markdown('___')
 
         parameter3 = st.text_input(f'**Parameter** #3', key='param3')
         if parameter3 is None:
@@ -75,7 +76,6 @@ def data_external():
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob5')
         st.markdown('___')
-
 
         st.form_submit_button(type='primary')
 
