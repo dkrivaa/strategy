@@ -35,7 +35,7 @@ def data_input():
         num = st.session_state.num
 
         with placeholder.form(key=str(num)):
-            st.write('test' + str(num))
+            st.text_input(f'test + {str(num)}')
 
             if st.form_submit_button():
                 st.session_state.num += 1
