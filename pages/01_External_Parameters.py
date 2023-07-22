@@ -10,6 +10,11 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
-st.header('Enter up to 5 external parameters')
+st.markdown(f'<span style="color: #ed7011; '
+            f'font-size: 14px"><b>'
+            f'Enter up to 5 external parameters'
+            f'</b></span>'
+            , unsafe_allow_html=True)
+
 engine.data_external()
 
