@@ -35,10 +35,12 @@ def data_input():
     with placeholder.form(key=str(num)):
         st.text_input(f'test{num + 1}')
 
-        if st.form_submit_button(on_click=st.experimental_rerun):
+        if st.form_submit_button():
             st.session_state.num += 1
             if st.session_state.num >= 5:
                 st.session_state.num = 0
+        else:
+            st.stop()
 
         st.write(st.session_state.num)
 
