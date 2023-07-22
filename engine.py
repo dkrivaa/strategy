@@ -30,7 +30,7 @@ def data_input():
     placeholder = st.empty()
     num = st.session_state.num
 
-    while st.session_state.num < 3:
+    for st.session_state.num < 3:
         with placeholder.form(key=str(num)):
             st.write('test' + str(num))
 
