@@ -46,6 +46,37 @@ def data_external():
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2')
 
+        parameter3 = st.text_input(f'**Parameter** #3', key='param3')
+        if parameter3 is None:
+            parameter = 0
+        significance3 = st.radio('**Significance** to organization',
+                                 ['low', 'average', 'above average', 'high'],
+                                 index=3, horizontal=True, key='sig3')
+        probability3 = st.slider('**Probability**', min_value=0, max_value=100,
+                                 step=5, value=(45, 55), key='prob3')
+        st.markdown('___')
+
+        parameter4 = st.text_input(f'**Parameter** #4', key='param4')
+        if parameter4 is None:
+            parameter = 0
+        significance4 = st.radio('**Significance** to organization',
+                                 ['low', 'average', 'above average', 'high'],
+                                 index=3, horizontal=True, key='sig4')
+        probability4 = st.slider('**Probability**', min_value=0, max_value=100,
+                                 step=5, value=(45, 55), key='prob4')
+        st.markdown('___')
+
+        parameter5= st.text_input(f'**Parameter** #5', key='param5')
+        if parameter5 is None:
+            parameter = 0
+        significance5 = st.radio('**Significance** to organization',
+                                 ['low', 'average', 'above average', 'high'],
+                                 index=3, horizontal=True, key='sig5')
+        probability5 = st.slider('**Probability**', min_value=0, max_value=100,
+                                 step=5, value=(45, 55), key='prob5')
+        st.markdown('___')
+
+
         st.form_submit_button(type='primary')
 
 
