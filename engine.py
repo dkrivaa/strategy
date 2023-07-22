@@ -29,7 +29,7 @@ def data_external():
 
         parameter1 = st.text_input(f'**Parameter** #1', key='param1')
         if parameter1 is None:
-            parameter = 0
+            parameter1 = 0
         significance1 = st.radio('**Significance** to organization',
                                 ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True, key='sig1')
@@ -39,7 +39,7 @@ def data_external():
 
         parameter2 = st.text_input(f'**Parameter** #2', key='param2')
         if parameter2 is None:
-            parameter = 0
+            parameter2 = 0
         significance2 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True, key='sig2')
@@ -49,7 +49,7 @@ def data_external():
 
         parameter3 = st.text_input(f'**Parameter** #3', key='param3')
         if parameter3 is None:
-            parameter = 0
+            parameter3 = 0
         significance3 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True, key='sig3')
@@ -59,7 +59,7 @@ def data_external():
 
         parameter4 = st.text_input(f'**Parameter** #4', key='param4')
         if parameter4 is None:
-            parameter = 0
+            parameter4 = 0
         significance4 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True, key='sig4')
@@ -69,7 +69,7 @@ def data_external():
 
         parameter5= st.text_input(f'**Parameter** #5', key='param5')
         if parameter5 is None:
-            parameter = 0
+            parameter5 = 0
         significance5 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True, key='sig5')
@@ -77,7 +77,21 @@ def data_external():
                                  step=5, value=(45, 55), key='prob5')
         st.markdown('___')
 
-        st.form_submit_button(type='primary')
+        submit_external = st.form_submit_button(type='primary')
+
+        if submit_external:
+            parameter = [parameter1, parameter2, parameter3, parameter4, parameter5]
+            significance = [significance1, significance2, significance3,
+                            significance4, significance5]
+            prob_low = [probability1[0], probability2[0], probability3[0],
+                        probability4[0], probability5[0]]
+            prob_high = [probability1[1], probability2[1], probability3[1],
+                         probability4[1], probability5[1]]
+        dfe = pd.DataFrame({'parameter': parameter,
+                            'significance': significance,
+                            'prob_low': prob_low,
+                            'prob_high': prob_high})
+    return dfe
 
 
 def upload_file():
