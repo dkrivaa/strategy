@@ -27,10 +27,10 @@ def data_input():
     if 'num' not in st.session_state:
         st.session_state.num = 0
 
+    st.write(st.session_state.num)
+
     placeholder = st.empty()
     num = st.session_state.num
-
-    st.write(st.session_state.num)
 
     with placeholder.form(key=str(num)):
         st.text_input(f'test{num + 1}')
