@@ -26,6 +26,7 @@ def data_input():
     # external and internal variables affecting the organization
     if 'num' not in st.session_state:
         st.session_state.num = 0
+
     st.write(st.session_state.num)
 
     placeholder = st.empty()
@@ -36,7 +37,8 @@ def data_input():
 
         if st.form_submit_button():
             st.session_state.num += 1
-        st.write(st.session_state.num)
+            placeholder.empty()
+
 
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
