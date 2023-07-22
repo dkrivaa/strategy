@@ -112,6 +112,12 @@ def data_input1():
             'probability_high': prob_h}
     df = pd.DataFrame(data)
 
+    internal()
+
+    st.write(df)
+
+
+def internal():
     if 'num' not in st.session_state:
         st.session_state.num = 0
 
@@ -147,8 +153,6 @@ def data_input1():
                 placeholder.empty()
         else:
             st.stop()
-
-    st.write(df)
 
 
 
