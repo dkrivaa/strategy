@@ -123,9 +123,9 @@ def data_input1():
 
             if st.form_submit_button():
                 st.session_state.num += 1
-                if st.session_state.num >= 5:
-                    st.session_state.num = 0
-                    placeholder.empty()
+                # if st.session_state.num >= 5:
+                #     st.session_state.num = 0
+                #     placeholder.empty()
             else:
                 st.stop()
 
