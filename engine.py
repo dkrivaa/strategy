@@ -26,23 +26,23 @@ def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
     with st.form('form1'):
-        parameter1 = st.text_input(f'parameter #1')
+        parameter1 = st.text_input(f'parameter #1', key='param1')
         if parameter1 is None:
             parameter = 0
         significance1 = st.radio('Significance to organization',
                                 ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True)
+                                 index=3, horizontal=True, key='sig1')
         probability1 = st.slider('probability', min_value=0, max_value=100,
-                                 step=5, value=(45, 55))
+                                 step=5, value=(45, 55), key='prob1')
         st.markdown('___')
-        parameter2 = st.text_input(f'parameter #1')
+        parameter2 = st.text_input(f'parameter #1', key='param2')
         if parameter2 is None:
             parameter = 0
         significance2 = st.radio('Significance to organization',
                                  ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True)
+                                 index=3, horizontal=True, key='sig2')
         probability2 = st.slider('probability', min_value=0, max_value=100,
-                                 step=5, value=(45, 55))
+                                 step=5, value=(45, 55), key='prob2')
 
         st.form_submit_button()
 
