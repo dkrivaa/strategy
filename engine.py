@@ -25,16 +25,29 @@ def icon():
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
-    pass
+    with st.form('form1'):
+        parameter1 = st.text_input(f'parameter #1')
+        if parameter1 is None:
+            parameter = 0
+        significance1 = st.radio('Significance to organization',
+                                ['low', 'average', 'above average', 'high'],
+                                 index=3, horizontal=True)
+        probability1 = st.slider('probability', min_value=0, max_value=100,
+                                 step=5, value=(45, 55))
+        st.markdown('___')
+        parameter1 = st.text_input(f'parameter #1')
+        if parameter1 is None:
+            parameter = 0
+        significance1 = st.radio('Significance to organization',
+                                 ['low', 'average', 'above average', 'high'],
+                                 index=3, horizontal=True)
+        probability1 = st.slider('probability', min_value=0, max_value=100,
+                                 step=5, value=(45, 55))
 
-    # parameter = st.text_input(f'parameter {num +1}', key=num+1)
-    #         if parameter is None:
-    #             parameter = 0
-    #         significance = st.radio('Significance to organization',
-    #                                 ['low', 'average', 'above average', 'high'],
-    #                                 index=3, horizontal=True, key=num+10)
-    #         probability = st.slider('probability', min_value=0, max_value=100,
-    #                                 step=5, value=(45, 55), key=num+100)
+
+
+
+        st.form_submit_button()
 
 
 def upload_file():
