@@ -24,6 +24,11 @@ def icon():
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
+    dfe = pd.DataFrame({'parameter': [],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': []})
+
     with st.form('external_form'):
 
         parameter1 = st.text_input(f'**Parameter** #1', key='param1')
@@ -90,12 +95,17 @@ def data_external():
                                 'significance': significance,
                                 'prob_low': prob_low,
                                 'prob_high': prob_high})
-            return dfe
+    return dfe
 
 
 def data_internal():
     # This function enables the user to enter data -
     # internal variables affecting the organization
+    dfi = pd.DataFrame({'parameter': [],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': []})
+
     with st.form('internal_form'):
 
         parameter1 = st.text_input(f'**Parameter** #1', key='param1')
@@ -162,29 +172,29 @@ def data_internal():
                                 'significance': significance,
                                 'prob_low': prob_low,
                                 'prob_high': prob_high})
-            return dfi
-
-
-def dfe_none():
-    # function to make dfe if no user input
-    dfe = data_external()
-    if dfe is None:
-        dfe = pd.DataFrame({'parameter': [],
-                            'significance': [],
-                            'prob_low': [],
-                            'prob_high': []})
-    return dfe
-
-
-def dfi_none():
-    # function to make dfi if no user input
-    dfi = data_external()
-    if dfi is None:
-        dfi = pd.DataFrame({'parameter': [],
-                            'significance': [],
-                            'prob_low': [],
-                            'prob_high': []})
     return dfi
+
+#
+# def dfe_none():
+#     # function to make dfe if no user input
+#     dfe = data_external()
+#     if dfe is None:
+#         dfe = pd.DataFrame({'parameter': [],
+#                             'significance': [],
+#                             'prob_low': [],
+#                             'prob_high': []})
+#     return dfe
+#
+#
+# def dfi_none():
+#     # function to make dfi if no user input
+#     dfi = data_external()
+#     if dfi is None:
+#         dfi = pd.DataFrame({'parameter': [],
+#                             'significance': [],
+#                             'prob_low': [],
+#                             'prob_high': []})
+#     return dfi
 
 
 def parameters():
@@ -192,8 +202,8 @@ def parameters():
     # parameters affecting the organization
     dfe = data_external()
     dfi = data_internal()
-    dfe_none()
-    dfi_none()
+    # dfe_none()
+    # dfi_none()
     all_parameters = pd.concat([dfe, dfi], axis=0)
     return all_parameters
 
