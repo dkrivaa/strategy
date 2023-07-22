@@ -29,10 +29,11 @@ def data_input():
 
     st.write(st.session_state.num)
 
-    placeholder = st.empty()
-    num = st.session_state.num
-
     for _ in [1, 2, 3, 4, 5]:
+
+        placeholder = st.empty()
+        num = st.session_state.num
+
         with placeholder.form(key=str(num)):
             st.write('test' + str(num))
 
