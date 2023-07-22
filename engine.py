@@ -120,8 +120,6 @@ def data_input1():
         probability = st.slider('probability', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key=num+100)
 
-        submit_button = st.form_submit_button()
-
         if st.form_submit_button():
             st.session_state.num += 1
             if st.session_state.num >= 5:
