@@ -20,11 +20,7 @@ st.markdown(f'<span style="color: #ed7011; '
 # Dataframe of internal parameters
 dfi = engine.data_internal()
 
-if dfi is None:
-    dfi = pd.DataFrame({'parameter': [],
-                        'significance': [],
-                        'prob_low': [],
-                        'prob_high': []})
+engine.dfi_none()
 
 st.write(dfi)
 

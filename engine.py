@@ -15,7 +15,6 @@ def home_title():
                 , unsafe_allow_html=True)
 
 
-
 def icon():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
           'jigsaws-puzzle_pieces-planning-creative-strategy-128.png'
@@ -165,10 +164,50 @@ def data_internal():
                                 'prob_high': prob_high})
             return dfi
 
+
+def dfe_none():
+    # function to make dfe if no user input
+    dfe = data_external()
+    if dfe is None:
+        dfe = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': []})
+    return dfe
+
+
+def dfi_none():
+    # function to make dfi if no user input
+    dfi = data_external()
+    if dfi is None:
+        dfi = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': []})
+    return dfi
+
+
+def parameters():
+    # Function that joins the dataframes for external and internal
+    # parameters affecting the organization
+    dfe = data_external()
+    dfi = data_internal()
+    dfe_none()
+    dfi_none()
+    all_parameters = pd.concat([dfe, dfi], axis=0)
+    return all_parameters
+
+
+
 def upload_file():
     with st.container():
         user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
                                      type=['xlsx', 'csv'])
+
+
+
+
+
 
 
 def explanation():
@@ -192,28 +231,3 @@ def explanation():
 
 
 
-
-
-    # if 'num' not in st.session_state:
-    #     st.session_state.num = 0
-    #
-    # st.write(st.session_state.num)
-    #
-    # placeholder = st.empty()
-    # num = st.session_state.num
-    # test = [0, 1, 2, 3, 4]
-    # for i in test:
-    #     with placeholder.form(key=str(num + i)):
-    #         st.text_input(f'test{num + 1}')
-    #         st.slider('test')
-    #
-    #         if st.form_submit_button():
-    #             st.session_state.num += 1
-    #             if st.session_state.num >= 5:
-    #                 st.session_state.num = 0
-    #             placeholder.empty()
-    #             sleep(0.01)
-    #
-    #     st.write(st.session_state.num)
-    #
-    #     return

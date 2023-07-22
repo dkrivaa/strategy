@@ -13,5 +13,8 @@ st.markdown(f'<span style="color: #ed7011; '
 st.markdown('___')
 
 
+all_parameters = engine.parameters()
+st.write(all_parameters)
+
 engine.upload_file()
 

@@ -20,11 +20,7 @@ st.markdown(f'<span style="color: #ed7011; '
 # Dataframe of external parameters
 dfe = engine.data_external()
 
-if dfe is None:
-    dfe = pd.DataFrame({'parameter': [],
-                        'significance': [],
-                        'prob_low': [],
-                        'prob_high': []})
+engine.dfe_none()
 
 st.write(dfe)
 
