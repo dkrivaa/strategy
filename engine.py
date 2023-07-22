@@ -146,7 +146,7 @@ def data_input1():
         df.loc[len(df)] = new_row
         st.write(df)
 
-        st.experimental_rerun()
+        # st.experimental_rerun()
 
 
 
