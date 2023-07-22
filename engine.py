@@ -26,6 +26,7 @@ def data_input():
     # external and internal variables affecting the organization
     if 'num' not in st.session_state:
         st.session_state.num = 0
+    st.write(st.session_state.num)
 
     placeholder = st.empty()
     num = st.session_state.num
