@@ -35,17 +35,14 @@ def data_external():
         probability1 = st.slider('probability', min_value=0, max_value=100,
                                  step=5, value=(45, 55))
         st.markdown('___')
-        parameter1 = st.text_input(f'parameter #1')
-        if parameter1 is None:
+        parameter2 = st.text_input(f'parameter #1')
+        if parameter2 is None:
             parameter = 0
-        significance1 = st.radio('Significance to organization',
+        significance2 = st.radio('Significance to organization',
                                  ['low', 'average', 'above average', 'high'],
                                  index=3, horizontal=True)
-        probability1 = st.slider('probability', min_value=0, max_value=100,
+        probability2 = st.slider('probability', min_value=0, max_value=100,
                                  step=5, value=(45, 55))
-
-
-
 
         st.form_submit_button()
 
