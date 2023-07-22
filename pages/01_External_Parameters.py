@@ -18,3 +18,5 @@ st.markdown(f'<span style="color: #ed7011; '
 
 dfe = engine.data_external()
 
+st.write(dfe)
+
