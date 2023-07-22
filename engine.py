@@ -32,9 +32,9 @@ def data_input():
 
     placeholder = st.empty()
     num = st.session_state.num
-
-    while num < 5:
-        with placeholder.form(key=str(num)):
+    test = [0, 1, 2, 3, 4]
+    for i in test:
+        with placeholder.form(key=str(num + i)):
             st.text_input(f'test{num + 1}')
             st.slider('test')
 
