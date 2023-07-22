@@ -22,32 +22,10 @@ def icon():
     return url
 
 
-def data_input():
+def data_input_external():
     # This function enables the user to enter data -
-    # external and internal variables affecting the organization
-    if 'num' not in st.session_state:
-        st.session_state.num = 0
-
-    st.write(st.session_state.num)
-
-    placeholder = st.empty()
-    num = st.session_state.num
-    test = [0, 1, 2, 3, 4]
-    for i in test:
-        with placeholder.form(key=str(num + i)):
-            st.text_input(f'test{num + 1}')
-            st.slider('test')
-
-            if st.form_submit_button():
-                st.session_state.num += 1
-                if st.session_state.num >= 5:
-                    st.session_state.num = 0
-                placeholder.empty()
-                sleep(0.01)
-
-        st.write(st.session_state.num)
-
-        return
+    # external variables affecting the organization
+    pass
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
     #         if parameter is None:
@@ -88,3 +66,26 @@ def explanation():
 
 
 
+    # if 'num' not in st.session_state:
+    #     st.session_state.num = 0
+    #
+    # st.write(st.session_state.num)
+    #
+    # placeholder = st.empty()
+    # num = st.session_state.num
+    # test = [0, 1, 2, 3, 4]
+    # for i in test:
+    #     with placeholder.form(key=str(num + i)):
+    #         st.text_input(f'test{num + 1}')
+    #         st.slider('test')
+    #
+    #         if st.form_submit_button():
+    #             st.session_state.num += 1
+    #             if st.session_state.num >= 5:
+    #                 st.session_state.num = 0
+    #             placeholder.empty()
+    #             sleep(0.01)
+    #
+    #     st.write(st.session_state.num)
+    #
+    #     return
