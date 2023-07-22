@@ -87,10 +87,10 @@ def data_external():
                         probability4[0], probability5[0]]
             prob_high = [probability1[1], probability2[1], probability3[1],
                          probability4[1], probability5[1]]
-        dfe = pd.DataFrame({'parameter': parameter,
-                            'significance': significance,
-                            'prob_low': prob_low,
-                            'prob_high': prob_high})
+            dfe = pd.DataFrame({'parameter': parameter,
+                                'significance': significance,
+                                'prob_low': prob_low,
+                                'prob_high': prob_high})
     return dfe
 
 
