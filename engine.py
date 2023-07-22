@@ -145,7 +145,7 @@ def data_input1():
                 placeholder.empty()
         else:
             st.stop()
-        st.write(df)
+        st.write(st.session_state.df)
 
         # st.experimental_rerun()
 
