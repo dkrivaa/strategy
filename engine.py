@@ -137,5 +137,7 @@ def data_input1():
         else:
             st.stop()
 
+    st.write(df)
+
 
 
