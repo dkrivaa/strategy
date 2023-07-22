@@ -127,7 +127,7 @@ def internal():
     # num = st.session_state.num
 
     for num in range(0,5):
-        with placeholder.form():
+        with placeholder.form(key=str(num)):
             parameter = st.text_input(f'parameter {num +1}', key=num+1)
             if parameter is None:
                 parameter=0
