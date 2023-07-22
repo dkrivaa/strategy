@@ -107,6 +107,8 @@ def data_input1():
     if 'num' not in st.session_state:
         st.session_state.num = 0
 
+    st.write(st.session_state.num)
+
     placeholder = st.empty()
     num = st.session_state.num
 
