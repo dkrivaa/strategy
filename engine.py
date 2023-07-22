@@ -109,12 +109,12 @@ def data_input1():
             'probability_high': []}
     df = pd.DataFrame(data)
 
+    if 'df' not in st.session_state:
+        st.session_state.df = df
+
     df.loc[len(df)] = internal()
 
     st.write(df)
-
-    if 'df' not in st.session_state:
-        st.session_state.df = df
 
 
 def internal():
