@@ -104,7 +104,8 @@ def explanation():
 
 
 def data_input1():
-    data = {'parameter': [], 'significance': [], 'probability': []}
+    data = {'parameter': [], 'significance': [], 'probability_low': [],
+            'probability_high': []}
     df = pd.DataFrame(data)
 
     if 'num' not in st.session_state:
@@ -124,13 +125,14 @@ def data_input1():
                                 index=3, horizontal=True, key=num+10)
         probability = st.slider('probability', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key=num+100)
-        st.write(probability[0])
 
         if st.form_submit_button():
             st.session_state.num += 1
             st.write(st.session_state.num)
-            new_row = {'parameter': parameter, 'significance': significance,
-                       'probability': probability}
+            new_row = {'parameter': parameter,
+                       'significance': significance,
+                       'probability_low': probability[0],
+                       'probability_high': probability[1]}
             df.loc[len(df)] = new_row
             if st.session_state.num >= 5:
                 st.session_state.num = 0
