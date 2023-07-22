@@ -13,7 +13,7 @@ def home_title():
                 f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
 
-    st.sidebar.header('Navigate')
+    st.sidebar.title('Navigate')
 
 
 def icon():
