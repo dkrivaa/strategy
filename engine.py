@@ -36,7 +36,6 @@ def data_input():
         st.text_input(f'test{num + 1}')
         st.slider('test')
 
-
         if st.form_submit_button():
             st.session_state.num += 1
             if st.session_state.num >= 5:
@@ -45,6 +44,7 @@ def data_input():
             st.stop()
 
         st.write(st.session_state.num)
+        return st.session_state.num
 
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
