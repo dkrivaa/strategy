@@ -26,6 +26,7 @@ def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
     with st.form('external_form'):
+
         parameter1 = st.text_input(f'**Parameter** #1', key='param1')
         if parameter1 is None:
             parameter = 0
@@ -35,6 +36,8 @@ def data_external():
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob1')
         st.markdown('___')
+        st.markdown('___')
+
         parameter2 = st.text_input(f'**Parameter** #2', key='param2')
         if parameter2 is None:
             parameter = 0
