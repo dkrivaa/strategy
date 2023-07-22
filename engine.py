@@ -129,7 +129,7 @@ def internal():
     with placeholder.form(key=str(num)):
         parameter = st.text_input(f'parameter {num +1}', key=num+1)
         if parameter is None:
-            parameter=0
+            parameter = 0
         significance = st.radio('Significance to organization',
                                 ['low', 'average', 'above average', 'high'],
                                 index=3, horizontal=True, key=num+10)
@@ -147,6 +147,7 @@ def internal():
         else:
             st.stop()
     st.write(st.session_state.num)
+    st.experimental_rerun()
 
     return new_row
 
