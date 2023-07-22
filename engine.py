@@ -32,13 +32,14 @@ def data_input():
     placeholder = st.empty()
     num = st.session_state.num
 
-    with placeholder.form(key=str(num)):
-        st.write('test' + str(num))
+    for _ in range(0, 5):
+        with placeholder.form(key=str(num)):
+            st.write('test' + str(num))
 
-        if st.form_submit_button():
-            st.session_state.num += 1
-            if st.session_state.num >= 5:
-                st.session_state.num = 0
+            if st.form_submit_button():
+                st.session_state.num += 1
+                if st.session_state.num >= 5:
+                    st.session_state.num = 0
 
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
