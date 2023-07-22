@@ -39,7 +39,7 @@ def data_input():
         if st.form_submit_button():
             st.session_state.num += 1
             if st.session_state.num >= 5:
-                st.stop()
+                st.session_state.num = 0
         else:
             st.stop()
 
