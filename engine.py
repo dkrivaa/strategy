@@ -22,7 +22,7 @@ def icon():
     return url
 
 
-def data_input_external():
+def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
     pass
