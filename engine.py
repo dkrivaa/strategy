@@ -115,8 +115,8 @@ def data_input1():
 
     st.write(df)
 
-
-def internal():
+#
+# def internal():
 
     if 'num' not in st.session_state:
         st.session_state.num = 0
