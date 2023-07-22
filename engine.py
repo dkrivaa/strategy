@@ -33,7 +33,7 @@ def data_input():
     with placeholder.form(key=str(num)):
         st.write('test' + str(num))
 
-        if st.form_submit_button():
+        if st.form_submit_button(on_click=data_input()):
             st.session_state.num += 1
 
 
