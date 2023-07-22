@@ -33,15 +33,16 @@ def data_input():
     num = st.session_state.num
 
     with placeholder.form(key=str(num)):
-        st.text_input(f'test{num + 1}')
-        st.slider('test')
+        for _ in range(0, 5):
+            st.text_input(f'test{num + 1}')
+            st.slider('test')
 
-        if st.form_submit_button():
-            st.session_state.num += 1
-            if st.session_state.num >= 5:
-                st.session_state.num = 0
-        else:
-            return
+            if st.form_submit_button():
+                st.session_state.num += 1
+                if st.session_state.num >= 5:
+                    st.session_state.num = 0
+            else:
+                return
 
     st.write(st.session_state.num)
 
