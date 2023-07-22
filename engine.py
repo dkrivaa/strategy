@@ -146,9 +146,10 @@ def data_input1():
                 placeholder.empty()
         else:
             st.stop()
+        df.loc[len(df)] = new_row
+
         st.experimental_rerun()
 
-    return new_row
 
 
 
