@@ -20,7 +20,6 @@ st.markdown(f'<span style="color: #ed7011; '
 # Dataframe of external parameters
 dfe = engine.data_external()
 
-engine.dfe_none()
 
 st.write(dfe)
 
