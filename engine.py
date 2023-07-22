@@ -124,7 +124,7 @@ def data_input1():
                                 index=3, horizontal=True, key=num+10)
         probability = st.slider('probability', min_value=0, max_value=100,
                                 step=5, value=(45, 55), key=num+100)
-        st.write(probability)
+        st.write(probability[0])
 
         if st.form_submit_button():
             st.session_state.num += 1
