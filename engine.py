@@ -37,9 +37,7 @@ def data_input():
 
         if st.form_submit_button():
             st.session_state.num += 1
-            placeholder.empty()
-
-
+    return
 
     # parameter = st.text_input(f'parameter {num +1}', key=num+1)
     #         if parameter is None:
