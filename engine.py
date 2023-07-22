@@ -118,36 +118,37 @@ def data_input1():
 
 
 def internal():
-    if 'num' not in st.session_state:
-        st.session_state.num = 0
-
-    st.write(st.session_state.num)
+    # if 'num' not in st.session_state:
+    #     st.session_state.num = 0
+    #
+    # st.write(st.session_state.num)
 
     placeholder = st.empty()
-    num = st.session_state.num
+    # num = st.session_state.num
 
-    with placeholder.form(key=str(num)):
-        parameter = st.text_input(f'parameter {num +1}', key=num+1)
-        if parameter is None:
-            parameter=0
-        significance = st.radio('Significance to organization',
-                                ['low', 'average', 'above average', 'high'],
-                                index=3, horizontal=True, key=num+10)
-        probability = st.slider('probability', min_value=0, max_value=100,
-                                step=5, value=(45, 55), key=num+100)
+    for num in range(0,5):
+        with placeholder.form():
+            parameter = st.text_input(f'parameter {num +1}', key=num+1)
+            if parameter is None:
+                parameter=0
+            significance = st.radio('Significance to organization',
+                                    ['low', 'average', 'above average', 'high'],
+                                    index=3, horizontal=True, key=num+10)
+            probability = st.slider('probability', min_value=0, max_value=100,
+                                    step=5, value=(45, 55), key=num+100)
 
-        if st.form_submit_button():
-            st.session_state.num += 1
-            st.write(st.session_state.num)
-            new_row = {'parameter': parameter,
-                       'significance': significance,
-                       'probability_low': probability[0],
-                       'probability_high': probability[1]}
-            if st.session_state.num >= 5:
-                st.session_state.num = 0
-                placeholder.empty()
-        else:
-            st.stop()
+            if st.form_submit_button():
+                st.session_state.num += 1
+                st.write(st.session_state.num)
+                new_row = {'parameter': parameter,
+                           'significance': significance,
+                           'probability_low': probability[0],
+                           'probability_high': probability[1]}
+                if st.session_state.num >= 5:
+                    st.session_state.num = 0
+                    placeholder.empty()
+            else:
+                st.stop()
 
         return new_row
 
