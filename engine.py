@@ -105,12 +105,8 @@ def explanation():
 
 
 def data_input1():
-    param = []
-    sig = []
-    prob_l = []
-    prob_h = []
-    data = {'parameter': param, 'significance': sig, 'probability_low': prob_l,
-            'probability_high': prob_h}
+    data = {'parameter': [], 'significance': [], 'probability_low': [],
+            'probability_high': []}
     df = pd.DataFrame(data)
 
     df.loc[len(df)] = internal()
@@ -139,7 +135,6 @@ def internal():
 
         if st.form_submit_button():
             st.session_state.num += 1
-            st.write(num)
             new_row = {'parameter': parameter,
                        'significance': significance,
                        'probability_low': probability[0],
