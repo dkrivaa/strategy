@@ -146,7 +146,6 @@ def internal():
                 placeholder.empty()
         else:
             st.stop()
-    st.write(st.session_state.num)
     st.experimental_rerun()
 
     return new_row
