@@ -10,5 +10,5 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
-engine.data_input1()
+engine.internal()
 
