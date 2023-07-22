@@ -111,9 +111,6 @@ def data_input1():
     if 'df' not in st.session_state:
         st.session_state.df = df
 
-    df.loc[len(df)] = internal()
-
-    st.write(df)
 
 #
 # def internal():
@@ -147,6 +144,7 @@ def data_input1():
         else:
             st.stop()
         df.loc[len(df)] = new_row
+        st.write(df)
 
         st.experimental_rerun()
 
