@@ -227,29 +227,62 @@ def initial_dfe():
     dfe = pd.DataFrame({'parameter': [],
                         'significance': [],
                         'prob_low': [],
-                        'prob_high': []})
+                        'prob_high': [],
+                        'influencer1': [],
+                        'influencer2': [],
+                        'influencer3': []})
     return dfe
 
 def initial_dfi():
     dfi = pd.DataFrame({'parameter': [],
                         'significance': [],
                         'prob_low': [],
-                        'prob_high': []})
+                        'prob_high': [],
+                        'influencer1': [],
+                        'influencer2': [],
+                        'influencer3': []})
     return dfi
 
 
 def parameters():
     # Function that joins the dataframes for external and internal
     # parameters affecting the organization
-    if st.session_state['dfe'] is True:
-        if st.session_state['dfi'] is True:
-            df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
-        else:
-            dfi = pd.DataFrame({'parameter': [],
-                                'significance': [],
-                                'prob_low': [],
-                                'prob_high': []})
-
+    if 'dfe' not in st.session_state and 'dfi' not in st.session_state:
+        dfe = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': [],
+                            'influencer1': [],
+                            'influencer2': [],
+                            'influencer3': []})
+        dfi = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': [],
+                            'influencer1': [],
+                            'influencer2': [],
+                            'influencer3': []})
+        df = pd.concat([dfe, dfi], axis=0)
+    elif 'dfe' not in st.session_state and 'dfi' in st.session_state:
+        dfe = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': [],
+                            'influencer1': [],
+                            'influencer2': [],
+                            'influencer3': []})
+        df = pd.concat([dfe, st.session_state.dfi], axis=0)
+    elif 'dfe' in st.session_state and 'dfi' not in st.session_state:
+        dfi = pd.DataFrame({'parameter': [],
+                            'significance': [],
+                            'prob_low': [],
+                            'prob_high': [],
+                            'influencer1': [],
+                            'influencer2': [],
+                            'influencer3': []})
+        df = pd.concat([st.session_state.dfe, dfi], axis=0)
+    else:
+        df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
 
     return df
 
