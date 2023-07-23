@@ -40,7 +40,6 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        st.session_state['user_file'] = {'user_file': ''}
         if st.button('Upload data file'):
             upload_file()
 
