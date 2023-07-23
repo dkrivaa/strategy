@@ -6,6 +6,8 @@ import engine
 
 # Setting top of page
 engine.home_title()
+engine.data_external()
+engine.data_internal()
 st.markdown(f'<span style="color: #ed7011; '
             f'font-size: 18px"><b>'
             f'App to simplify strategic planning based on user defined parameters'
