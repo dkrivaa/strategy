@@ -214,7 +214,7 @@ def data_internal():
             dfi = pd.DataFrame({'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
-                                'prob_high': prob_high
+                                'prob_high': prob_high,
                                 'influencer1': influencer1,
                                 'influencer2': influencer2,
                                 'influencer3': influencer3})
