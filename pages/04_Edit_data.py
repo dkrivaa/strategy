@@ -13,5 +13,5 @@ st.markdown(f'<span style="color: #ed7011; '
 st.markdown('___')
 
 df = engine.parameters()
-st.data_editor(df, num_rows='dynamic')
+st.data_editor(df)
 
