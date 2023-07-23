@@ -15,12 +15,11 @@ st.markdown(f'<span style="color: #ed7011; '
 st.markdown('___')
 
 
-# st.write(st.session_state)
-# df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
+if st.session_state['dfi']:
+    st.write('it works')
+else:
+    st.write('dfi is not in session_state')
 
-# st.write(df)
-# st.write(st.session_state['dfi'])
-# st.write(st.session_state['dfe'])
 
 engine.upload_file()
 
