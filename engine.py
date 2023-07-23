@@ -206,8 +206,8 @@ def upload_file():
                                       type=['csv'])
 
         # upload file containing the factors (influencers) that can affect the parameters
-        user_file2 = st.file_uploader('Upload your **influencers** (internal and external) file (.csv)',
-                                      type=['csv'])
+        # user_file2 = st.file_uploader('Upload your **influencers** (internal and external) file (.csv)',
+        #                               type=['csv'])
 
 
 
