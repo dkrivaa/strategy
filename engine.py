@@ -254,7 +254,6 @@ def upload_file():
                                       type=['csv'])
 
 
-
 def explanation():
     # This function presents the info on the 'About' page
     with st.container():
