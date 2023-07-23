@@ -119,6 +119,8 @@ def data_external():
                                 'influencer3': influencer3})
     if dfe not in st.session_state:
         st.session_state.dfe = dfe
+    else:
+        st.session_state.dfe = dfe
     return dfe
 
 
