@@ -321,8 +321,9 @@ def parameters():
 def upload_file():
     with st.container():
         # upload file containing internal and external parameters affecting the organization
-        user_file1 = st.file_uploader('Upload your **parameters** file (.csv)',
+        user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                       type=['csv'])
+        return user_file
 
 
 def explanation():
@@ -352,6 +353,15 @@ def explanation():
                  'opportunities presented by the external and internal parameters.')
         st.markdown('___')
 
+
+def edit_data():
+    if upload_file():
+        df = pd.read_csv(upload_file())
+    else:
+        df = parameters()
+
+    if df.shape == (0, 0):
+        st.warning('There is no data. Please enter data on relevant pages')
 
 
 
