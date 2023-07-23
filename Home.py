@@ -15,7 +15,7 @@ st.markdown(f'<span style="color: #ed7011; '
 st.markdown('___')
 
 
-if st.session_state['dfi']:
+if st.session_state.dfi:
     st.write('it works')
 else:
     st.write('dfi is not in session_state')
