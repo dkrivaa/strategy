@@ -24,10 +24,6 @@ def icon():
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
-    dfe = pd.DataFrame({'parameter': [],
-                        'significance': [],
-                        'prob_low': [],
-                        'prob_high': []})
 
     with st.form('external_form'):
 
@@ -103,10 +99,6 @@ def data_external():
 def data_internal():
     # This function enables the user to enter data -
     # internal variables affecting the organization
-    dfi = pd.DataFrame({'parameter': [],
-                        'significance': [],
-                        'prob_low': [],
-                        'prob_high': []})
 
     with st.form('internal_form'):
 
@@ -177,6 +169,18 @@ def data_internal():
     if 'dfi' not in st.session_state:
         st.session_state.dfi = dfi
     return dfi
+
+
+def initial_dataframes():
+    dfi = pd.DataFrame({'parameter': [],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': []})
+    dfe = pd.DataFrame({'parameter': [],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': []})
+    return dfe, dfi
 
 
 def parameters():
