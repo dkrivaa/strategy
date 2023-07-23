@@ -274,6 +274,12 @@ def explanation():
         st.write('EXTERNAL PARAMETERS: Exogenous factors which significantly '
                  'affect the organizations ability to achieve its vision and mission. '
                  'The organization have little or no influence on these parameters.')
+        st.write('INTERNAL PARAMETERS: Parameters within the scope of influence by the '
+                 'organization which significantly affect the organizations '
+                 'ability to achieve its vision and mission.')
+        st.write('INFLUENCERS: Variables subject to decisions by the organization '
+                 'that can influence the ability to cope with / exploit the challenges and '
+                 'opportunities presented by the external and internal parameters.')
 
 
 
