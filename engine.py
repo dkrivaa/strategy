@@ -220,6 +220,8 @@ def data_internal():
                                 'influencer3': influencer3})
     if 'dfi' not in st.session_state:
         st.session_state.dfi = dfi
+    else:
+        st.session_state.dfi = dfi
     return dfi
 
 
