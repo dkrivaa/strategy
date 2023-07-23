@@ -325,6 +325,7 @@ def upload_file():
                                      type=['csv'])
         if user_file not in st.session_state:
             st.session_state.user_file = user_file
+        st.write(st.session_state)
         return user_file
 
 
@@ -357,14 +358,14 @@ def explanation():
 
 
 def edit_data():
-    if upload_file() in st.session_state:
-        df = pd.read_csv(upload_file())
-    else:
-        df = parameters()
-
-    if df.shape == (0, 0):
-        st.warning('There is no data. Please enter data on relevant pages')
-
+    # if user_file not in st.session_state:
+    #     df = pd.read_csv(upload_file())
+    # else:
+    #     df = parameters()
+    #
+    # if df.shape == (0, 0):
+    #     st.warning('There is no data. Please enter data on relevant pages')
+    pass
 
 
 
