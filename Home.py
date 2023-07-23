@@ -17,7 +17,7 @@ st.markdown('___')
 if 'dfi' not in st.session_state:
     st.write('not in session_state')
 else:
-    st.write('fi in session_state')
+    st.write('dfi in session_state')
 
 df = engine.parameters()
 st.write(df)
