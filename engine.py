@@ -23,17 +23,20 @@ def icon():
 
 def home_menu():
     with st.container():
-        st.write('test')
+        url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
+               'goal-target-idea-think-objective-64.png'
+        st.image(url1)
+
 
     with st.container():
         col1, col2, col3 = st.columns([1, 1, 8])
-        url1 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
-        url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
+        url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
+        url3 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
         with col1:
-            st.image(url1)
+            st.image(url2)
             st.button('Enter data')
         with col2:
-            st.image(url2)
+            st.image(url3)
             st.button('Upload data file')
 
 
