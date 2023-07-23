@@ -18,8 +18,7 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 
 # Dataframe of internal parameters
-dfi = engine.data_internal()
+engine.data_internal()
 
 
-st.write(dfi)
 
