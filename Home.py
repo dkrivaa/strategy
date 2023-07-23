@@ -16,10 +16,10 @@ st.markdown('___')
 
 url1 = 'https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/data-48.png'
 st.image(url1)
+st.button('Enter data')
+
+engine.upload_file()
 
 
 df = engine.parameters()
 st.data_editor(df)
-
-engine.upload_file()
-
