@@ -268,6 +268,10 @@ def explanation():
         st.write('* identifying the main areas that warrant attention')
         st.write('* develop possible scenario designs')
         st.write('* promote explicit strategic decisions')
+        st.markdown('___')
+
+        st.write('Terminology:')
+
 
 
 
