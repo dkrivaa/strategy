@@ -317,7 +317,6 @@ def parameters():
     return df
 
 
-
 def upload_file():
     with st.container():
         # upload file containing internal and external parameters affecting the organization
