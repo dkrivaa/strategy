@@ -14,6 +14,8 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
+
+st.write(st.session_state)
 # df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
 
 # st.write(df)
