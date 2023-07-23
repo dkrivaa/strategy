@@ -23,6 +23,9 @@ def icon():
 
 def home_menu():
     with st.container():
+        st.write('test')
+
+    with st.container():
         col1, col2, col3 = st.columns([1, 1, 8])
         url1 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
         url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
