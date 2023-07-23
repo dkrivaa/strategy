@@ -14,6 +14,10 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
+url1 = 'https://www.iconfinder.com/icons/115746/data_icon'
+st.image(url1)
+
+
 df = engine.parameters()
 st.data_editor(df)
 
