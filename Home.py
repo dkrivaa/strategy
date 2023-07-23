@@ -17,7 +17,7 @@ df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
 
 st.write(df)
 st.write(st.session_state['dfi'])
-# st.write(st.session_state['dfe'])
+st.write(st.session_state['dfe'])
 
 engine.upload_file()
 
