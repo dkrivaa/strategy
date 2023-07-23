@@ -18,6 +18,5 @@ url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
 st.image(url)
 
 
-# df = engine.parameters()
-# st.data_editor(df)
+
 
