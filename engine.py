@@ -37,6 +37,7 @@ def data_external():
                                  index=3, horizontal=True, key='sig1_e')
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob1_e')
+        influencer11 = st.text_input('**Influence** #1', key='inf11_e')
         st.markdown('___')
 
         parameter2 = st.text_input(f'**Parameter** #2', key='param2_e')
