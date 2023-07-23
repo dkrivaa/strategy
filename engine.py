@@ -200,9 +200,14 @@ def parameters():
 
 
 def upload_file():
-    with st.container():
-        user_file = st.file_uploader('Upload your file (.xlsx or .csv)',
-                                     type=['xlsx', 'csv'])
+    with st.container('upload'):
+        # upload file containing internal and external parameters affecting the organization
+        user_file1 = st.file_uploader('Upload your parameters (internal and external) file (.csv)',
+                                      type=['csv'])
+
+        # upload file containing the factors (influencers) that can affect the parameters
+        user_file2 = st.file_uploader('Upload your influencers (internal and external) file (.csv)',
+                                      type=['csv'])
 
 
 
