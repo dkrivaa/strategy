@@ -40,7 +40,6 @@ def data_external():
         influencer11 = st.text_input('**Influencer** #1', key='inf11_e')
         influencer12 = st.text_input('**Influencer** #2', key='inf12_e')
         influencer13 = st.text_input('**Influencer** #3', key='inf13_e')
-
         st.markdown('___')
 
         parameter2 = st.text_input(f'**Parameter** #2', key='param2_e')
@@ -51,6 +50,9 @@ def data_external():
                                  index=3, horizontal=True, key='sig2_e')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2_e')
+        influencer21 = st.text_input('**Influencer** #1', key='inf21_e')
+        influencer22 = st.text_input('**Influencer** #2', key='inf22_e')
+        influencer23 = st.text_input('**Influencer** #3', key='inf23_e')
         st.markdown('___')
 
         parameter3 = st.text_input(f'**Parameter** #3', key='param3_e')
@@ -61,6 +63,9 @@ def data_external():
                                  index=3, horizontal=True, key='sig3_e')
         probability3 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob3_e')
+        influencer31 = st.text_input('**Influencer** #1', key='inf31_e')
+        influencer32 = st.text_input('**Influencer** #2', key='inf32_e')
+        influencer33 = st.text_input('**Influencer** #3', key='inf33_e')
         st.markdown('___')
 
         parameter4 = st.text_input(f'**Parameter** #4', key='param4_e')
@@ -71,6 +76,9 @@ def data_external():
                                  index=3, horizontal=True, key='sig4_e')
         probability4 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob4_e')
+        influencer41 = st.text_input('**Influencer** #1', key='inf41_e')
+        influencer42 = st.text_input('**Influencer** #2', key='inf42_e')
+        influencer43 = st.text_input('**Influencer** #3', key='inf43_e')
         st.markdown('___')
 
         parameter5= st.text_input(f'**Parameter** #5', key='param5_e')
@@ -81,6 +89,9 @@ def data_external():
                                  index=3, horizontal=True, key='sig5_e')
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob5_e')
+        influencer51 = st.text_input('**Influencer** #1', key='inf51_e')
+        influencer52 = st.text_input('**Influencer** #2', key='inf52_e')
+        influencer53 = st.text_input('**Influencer** #3', key='inf53_e')
         st.markdown('___')
 
         submit_external = st.form_submit_button(type='primary')
@@ -93,10 +104,19 @@ def data_external():
                         probability4[0], probability5[0]]
             prob_high = [probability1[1], probability2[1], probability3[1],
                          probability4[1], probability5[1]]
+            influencer1 = [influencer11, influencer21, influencer31, influencer41,
+                           influencer51]
+            influencer2 = [influencer12, influencer22, influencer32, influencer42,
+                           influencer52]
+            influencer3 = [influencer13, influencer23, influencer33, influencer43,
+                           influencer53]
             dfe = pd.DataFrame({'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
-                                'prob_high': prob_high})
+                                'prob_high': prob_high,
+                                'influencer1': influencer1,
+                                'influencer2': influencer2,
+                                'influencer3': influencer3})
     if dfe not in st.session_state:
         st.session_state.dfe = dfe
     return dfe
