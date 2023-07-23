@@ -33,19 +33,15 @@ def home_menu():
     st.markdown('___')
 
     with st.container():
-        col1, col2, col3 = st.columns([1, 1, 4])
         url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
         url3 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
-        with col1:
-            st.image(url2)
-            if st.button('Enter data'):
-                st.success("Press 'External Parameters' on sidebar")
+        st.image(url2)
+        if st.button('Enter data'):
+            st.success("Press 'External Parameters' on sidebar")
 
-
-        with col2:
-            st.image(url3)
-            if st.button('Upload data file'):
-                upload_file()
+        st.image(url3)
+        if st.button('Upload data file'):
+            upload_file()
 
 
 def data_external():
