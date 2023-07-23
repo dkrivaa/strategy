@@ -12,6 +12,5 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
-df = engine.parameters()
-st.data_editor(df)
+engine.edit_data()
 
