@@ -358,14 +358,14 @@ def explanation():
 
 
 def edit_data():
-    # if user_file not in st.session_state:
-    #     df = pd.read_csv(upload_file())
-    # else:
-    #     df = parameters()
-    #
-    # if df.shape == (0, 0):
-    #     st.warning('There is no data. Please enter data on relevant pages')
-    pass
+    if upload_file() is not None :
+        df = pd.read_csv(upload_file())
+    else:
+        df = parameters()
+
+    if df.shape == (0, 0):
+        st.warning('There is no data. Please enter data on relevant pages')
+
 
 
 
