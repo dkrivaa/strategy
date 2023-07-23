@@ -15,10 +15,10 @@ st.markdown(f'<span style="color: #ed7011; '
 st.markdown('___')
 
 
-if st.session_state.dfi is True:
-    st.write('it works')
-else:
+if 'dfi' not in st.session_state:
     st.write('dfi is not in session_state')
+else:
+    st.write('it works')
 
 
 engine.upload_file()
