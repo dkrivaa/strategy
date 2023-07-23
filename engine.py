@@ -24,7 +24,7 @@ def icon():
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
-
+    dfe = initial_dataframes()
     with st.form('external_form'):
 
         parameter1 = st.text_input(f'**Parameter** #1', key='param1_e')
