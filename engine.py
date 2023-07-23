@@ -358,7 +358,7 @@ def explanation():
 
 
 def edit_data():
-    if upload_file() is not None :
+    if st.session_state.user_file is not None:
         df = pd.read_csv(upload_file())
     else:
         df = parameters()
