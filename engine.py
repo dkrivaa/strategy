@@ -263,8 +263,7 @@ def explanation():
                  'to define strategic goals, identify possible paths and facilitate '
                  'a proactive decision-making process. This '
                  'App is intended to assist any organization, public or private, '
-                 'to perform such a strategic process by:'
-                 )
+                 'to perform such a strategic process by:')
         st.write('* identifying the main areas that warrant attention')
         st.write('* develop possible scenario designs')
         st.write('* promote explicit strategic decisions')
@@ -280,6 +279,7 @@ def explanation():
         st.write('INFLUENCERS: Variables subject to decisions by the organization '
                  'that can influence the ability to cope with / exploit the challenges and '
                  'opportunities presented by the external and internal parameters.')
+        st.markdown('___')
 
 
 
