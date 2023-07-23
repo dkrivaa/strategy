@@ -110,54 +110,54 @@ def data_internal():
 
     with st.form('internal_form'):
 
-        parameter1 = st.text_input(f'**Parameter** #1', key='param1')
+        parameter1 = st.text_input(f'**Parameter** #1', key='param1_i')
         if parameter1 is None:
             parameter1 = 0
         significance1 = st.radio('**Significance** to organization',
                                 ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True, key='sig1')
+                                 index=3, horizontal=True, key='sig1_i')
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
-                                 step=5, value=(45, 55), key='prob1')
+                                 step=5, value=(45, 55), key='prob1_i')
         st.markdown('___')
 
-        parameter2 = st.text_input(f'**Parameter** #2', key='param2')
+        parameter2 = st.text_input(f'**Parameter** #2', key='param2_i')
         if parameter2 is None:
             parameter2 = 0
         significance2 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True, key='sig2')
+                                 index=3, horizontal=True, key='sig2_i')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
-                                 step=5, value=(45, 55), key='prob2')
+                                 step=5, value=(45, 55), key='prob2_i')
         st.markdown('___')
 
-        parameter3 = st.text_input(f'**Parameter** #3', key='param3')
+        parameter3 = st.text_input(f'**Parameter** #3', key='param3_i')
         if parameter3 is None:
             parameter3 = 0
         significance3 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True, key='sig3')
+                                 index=3, horizontal=True, key='sig3_i')
         probability3 = st.slider('**Probability**', min_value=0, max_value=100,
-                                 step=5, value=(45, 55), key='prob3')
+                                 step=5, value=(45, 55), key='prob3_i')
         st.markdown('___')
 
-        parameter4 = st.text_input(f'**Parameter** #4', key='param4')
+        parameter4 = st.text_input(f'**Parameter** #4', key='param4_i')
         if parameter4 is None:
             parameter4 = 0
         significance4 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True, key='sig4')
+                                 index=3, horizontal=True, key='sig4_i')
         probability4 = st.slider('**Probability**', min_value=0, max_value=100,
-                                 step=5, value=(45, 55), key='prob4')
+                                 step=5, value=(45, 55), key='prob4_i')
         st.markdown('___')
 
-        parameter5= st.text_input(f'**Parameter** #5', key='param5')
+        parameter5= st.text_input(f'**Parameter** #5', key='param5_i')
         if parameter5 is None:
             parameter5 = 0
         significance5 = st.radio('**Significance** to organization',
                                  ['low', 'average', 'above average', 'high'],
-                                 index=3, horizontal=True, key='sig5')
+                                 index=3, horizontal=True, key='sig5_i')
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
-                                 step=5, value=(45, 55), key='prob5')
+                                 step=5, value=(45, 55), key='prob5_i')
         st.markdown('___')
 
         submit_internal = st.form_submit_button(type='primary')
