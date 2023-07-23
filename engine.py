@@ -322,10 +322,12 @@ def upload_file():
         # upload file containing internal and external parameters affecting the organization
         user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                      type=['csv'])
-        if user_file not in st.session_state:
+        if 'user_file' not in st.session_state:
             st.session_state.user_file = user_file
+        df = pd.read_csv(st.session_state.user_file)
+        if 'df' not in st.session_state:
+            st.session_state.df = df
         st.write(st.session_state)
-        return user_file
 
 
 def explanation():
@@ -358,8 +360,8 @@ def explanation():
 
 def edit_data():
     # Defining df - from uploaded file or from data entering
-    if st.session_state.user_file:
-        df = pd.read_csv(st.session_state.user_file)
+    if 'df' in st.session_state:
+        df = st.session_state.df
     else:
         df = parameters()
 
