@@ -14,6 +14,10 @@ st.markdown(f'<span style="color: #ed7011; '
             , unsafe_allow_html=True)
 st.markdown('___')
 
+if 'dfi' not in st.session_state:
+    st.write('not in session_state')
+else:
+    st.write('fi in session_state')
 
 df = engine.parameters()
 st.write(df)
