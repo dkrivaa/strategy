@@ -14,7 +14,7 @@ def home_title():
                 f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
 
-    st.sidebar.button('save file')
+    st.sidebar.button('save file', type='primary')
 
 
 def icon():
