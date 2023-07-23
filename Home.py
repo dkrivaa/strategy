@@ -24,7 +24,7 @@ with st.container():
         st.button('Enter data')
     with col2:
         st.image(url2)
-        st.button('Upload data file and edit')
+        st.button('Upload data file')
 
 engine.upload_file()
 
