@@ -16,13 +16,15 @@ st.markdown('___')
 
 
 with st.container():
-    col1, col2, col3 = st.columns([1,1,8])
+    col1, col2, col3 = st.columns([1, 1, 8])
     url1 = 'https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/data-48.png'
-    url2 ='https://cdn4.iconfinder.com/data/icons/font-awesome-regular/576/edit-48.png'
-    col1.st.image(url1)
-    col1.st.button('Enter data')
-    col2.st.image(url2)
-    col2.st.button('Upload data file and edit')
+    url2 = 'https://cdn4.iconfinder.com/data/icons/font-awesome-regular/576/edit-48.png'
+    with col1:
+        st.image(url1)
+        st.button('Enter data')
+    with col2:
+        st.image(url2)
+        st.button('Upload data file and edit')
 
 engine.upload_file()
 
