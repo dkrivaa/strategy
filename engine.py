@@ -40,7 +40,6 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        user_file = None
         if st.button('Upload data file'):
             upload_file()
 
@@ -323,8 +322,8 @@ def upload_file():
         # upload file containing internal and external parameters affecting the organization
         user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                      type=['csv'])
-        if user_file not in st.session_state:
-            st.session_state.user_file = user_file
+        # if user_file not in st.session_state:
+        #     st.session_state.user_file = user_file
         st.write(st.session_state)
         return user_file
 
