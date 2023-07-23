@@ -138,6 +138,9 @@ def data_internal():
                                  index=3, horizontal=True, key='sig1_i')
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob1_i')
+        influencer11 = st.text_input('**Influencer** #1', key='inf11_i')
+        influencer12 = st.text_input('**Influencer** #2', key='inf12_i')
+        influencer13 = st.text_input('**Influencer** #3', key='inf13_i')
         st.markdown('___')
 
         parameter2 = st.text_input(f'**Parameter** #2', key='param2_i')
@@ -148,6 +151,9 @@ def data_internal():
                                  index=3, horizontal=True, key='sig2_i')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2_i')
+        influencer21 = st.text_input('**Influencer** #1', key='inf21_i')
+        influencer22 = st.text_input('**Influencer** #2', key='inf22_i')
+        influencer23 = st.text_input('**Influencer** #3', key='inf23_i')
         st.markdown('___')
 
         parameter3 = st.text_input(f'**Parameter** #3', key='param3_i')
@@ -158,6 +164,9 @@ def data_internal():
                                  index=3, horizontal=True, key='sig3_i')
         probability3 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob3_i')
+        influencer31 = st.text_input('**Influencer** #1', key='inf31_i')
+        influencer32 = st.text_input('**Influencer** #2', key='inf32_i')
+        influencer33 = st.text_input('**Influencer** #3', key='inf33_i')
         st.markdown('___')
 
         parameter4 = st.text_input(f'**Parameter** #4', key='param4_i')
@@ -168,6 +177,9 @@ def data_internal():
                                  index=3, horizontal=True, key='sig4_i')
         probability4 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob4_i')
+        influencer41 = st.text_input('**Influencer** #1', key='inf41_i')
+        influencer42 = st.text_input('**Influencer** #2', key='inf42_i')
+        influencer43 = st.text_input('**Influencer** #3', key='inf43_i')
         st.markdown('___')
 
         parameter5 = st.text_input(f'**Parameter** #5', key='param5_i')
@@ -178,6 +190,9 @@ def data_internal():
                                  index=3, horizontal=True, key='sig5_i')
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob5_i')
+        influencer51 = st.text_input('**Influencer** #1', key='inf51_i')
+        influencer52 = st.text_input('**Influencer** #2', key='inf52_i')
+        influencer53 = st.text_input('**Influencer** #3', key='inf53_i')
         st.markdown('___')
 
         submit_internal = st.form_submit_button(type='primary')
@@ -190,10 +205,19 @@ def data_internal():
                         probability4[0], probability5[0]]
             prob_high = [probability1[1], probability2[1], probability3[1],
                          probability4[1], probability5[1]]
+            influencer1 = [influencer11, influencer21, influencer31, influencer41,
+                           influencer51]
+            influencer2 = [influencer12, influencer22, influencer32, influencer42,
+                           influencer52]
+            influencer3 = [influencer13, influencer23, influencer33, influencer43,
+                           influencer53]
             dfi = pd.DataFrame({'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
-                                'prob_high': prob_high})
+                                'prob_high': prob_high
+                                'influencer1': influencer1,
+                                'influencer2': influencer2,
+                                'influencer3': influencer3})
     if 'dfi' not in st.session_state:
         st.session_state.dfi = dfi
     return dfi
