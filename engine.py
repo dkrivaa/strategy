@@ -281,8 +281,11 @@ def parameters():
                             'influencer2': [],
                             'influencer3': []})
         df = pd.concat([st.session_state.dfe, dfi], axis=0)
-    else:
+    elif 'dfe' in st.session_state and 'dfi' in st.session_state:
         df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
+    else:
+        df = None
+        st.warning('Something is wrong')
 
     return df
 
