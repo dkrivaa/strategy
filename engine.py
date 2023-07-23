@@ -150,7 +150,7 @@ def data_internal():
                                  step=5, value=(45, 55), key='prob4_i')
         st.markdown('___')
 
-        parameter5= st.text_input(f'**Parameter** #5', key='param5_i')
+        parameter5 = st.text_input(f'**Parameter** #5', key='param5_i')
         if parameter5 is None:
             parameter5 = 0
         significance5 = st.radio('**Significance** to organization',
