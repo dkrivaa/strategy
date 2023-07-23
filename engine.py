@@ -3,6 +3,7 @@ import streamlit as st
 from time import sleep
 
 
+
 def home_title():
     # This function sets the generale outlay of page and the top banner
     url = icon()
@@ -37,7 +38,10 @@ def home_menu():
         url3 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
         with col1:
             st.image(url2)
-            st.button('Enter data')
+            if st.button('Enter data'):
+                st.success('Press External Parameters on sidebar')
+
+
         with col2:
             st.image(url3)
             st.button('Upload data file')
