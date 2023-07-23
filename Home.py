@@ -15,6 +15,5 @@ st.markdown('___')
 
 engine.home_menu()
 
-# df = engine.parameters()
-# st.data_editor(df)
+
 
