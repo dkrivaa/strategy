@@ -359,7 +359,7 @@ def explanation():
 def edit_data():
     # Defining df - from uploaded file or from data entering
     if st.session_state.user_file:
-        df = pd.read_csv(upload_file())
+        df = pd.read_csv(st.session_state.user_file)
     else:
         df = parameters()
 
