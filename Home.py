@@ -17,7 +17,6 @@ st.markdown('___')
 engine.home_menu()
 
 
-engine.upload_file()
 
 
 df = engine.parameters()

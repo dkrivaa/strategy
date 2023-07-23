@@ -39,13 +39,13 @@ def home_menu():
         with col1:
             st.image(url2)
             if st.button('Enter data'):
-                st.success('Press External Parameters on sidebar')
+                st.success("Press 'External Parameters' on sidebar")
 
 
         with col2:
             st.image(url3)
-            st.button('Upload data file')
-
+            if st.button('Upload data file'):
+                upload_file()
 
 
 def data_external():
