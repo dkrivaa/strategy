@@ -17,8 +17,8 @@ st.markdown('___')
 
 with st.container():
     col1, col2, col3 = st.columns([1, 1, 8])
-    url1 = 'https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/data-48.png'
-    url2 = 'https://cdn4.iconfinder.com/data/icons/font-awesome-regular/576/edit-48.png'
+    url1 = 'https://cdn0.iconfinder.com/data/icons/set-app-incredibles/24/Edit-01-48.png'
+    url2 = 'https://cdn0.iconfinder.com/data/icons/phosphor-regular-vol-4/256/upload-simple-48.png'
     with col1:
         st.image(url1)
         st.button('Enter data')
