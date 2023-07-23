@@ -271,6 +271,10 @@ def explanation():
         st.markdown('___')
 
         st.write('Terminology:')
+        st.write('EXTERNAL PARAMETERS: Exogenous factors which significantly '
+                 'affect the organizations ability to achieve its vision and mission. '
+                 'The organization have little or no influence on these parameters.')
+
 
 
 
