@@ -14,6 +14,8 @@ def home_title():
                 f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
                 , unsafe_allow_html=True)
 
+    st.sidebar.download_button('save file')
+
 
 def icon():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
