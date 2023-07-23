@@ -247,7 +247,9 @@ def initial_dfi():
 def parameters():
     # Function that joins the dataframes for external and internal
     # parameters affecting the organization
-    if 'dfe' not in st.session_state and 'dfi' not in st.session_state:
+    if 'dfe' in st.session_state and 'dfi' in st.session_state:
+        df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
+    elif 'dfe' not in st.session_state and 'dfi' not in st.session_state:
         dfe = pd.DataFrame({'parameter': [],
                             'significance': [],
                             'prob_low': [],
@@ -281,8 +283,6 @@ def parameters():
                             'influencer2': [],
                             'influencer3': []})
         df = pd.concat([st.session_state.dfe, dfi], axis=0)
-    elif 'dfe' in st.session_state and 'dfi' in st.session_state:
-        df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
     else:
         df = None
         st.warning('Something is wrong')
