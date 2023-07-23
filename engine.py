@@ -27,9 +27,9 @@ def home_menu():
         url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
                'goal-target-idea-think-objective-64.png'
         st.image(url1)
-        st.write('1. Enter **your** data')
-        st.write('2. Save **your** data')
-        st.write('3. Get **your** results')
+        st.write('1. Enter data')
+        st.write('2. Save data')
+        st.write('3. Analyze & get results')
     st.markdown('___')
 
     with st.container():
@@ -37,7 +37,7 @@ def home_menu():
         url3 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-6/24/upload-48.png'
         st.image(url2)
         if st.button('Enter data'):
-            st.success("Press 'External Parameters' on sidebar")
+            st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
         if st.button('Upload data file'):
