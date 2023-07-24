@@ -41,6 +41,8 @@ def home_menu():
         st.image(url3)
         upload_file()
 
+    save_file()
+
 
 def save_file():
     # Function to save and download datafile in csv format
