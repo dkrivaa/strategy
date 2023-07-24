@@ -23,7 +23,7 @@ def icon():
 
 def home_menu():
     with st.container():
-        cols = st.columns[1, 1, 1, 4]
+        cols = st.columns([1, 1, 1, 4])
         cols[0].st.button('**Data**')
         cols[1].st.button('**Analyze**')
         cols[2].st.button('**Results**')
