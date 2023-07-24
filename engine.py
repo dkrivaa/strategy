@@ -325,8 +325,6 @@ def upload_file():
         # upload file containing internal and external parameters affecting the organization
         my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
         if my_file is not None:
-            if 'my_file' not in st.session_state:
-                st.session_state.my_file = my_file
 
             df = pd.read_csv(my_file)
             if 'df' not in st.session_state:
