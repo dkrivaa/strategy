@@ -25,7 +25,7 @@ def home_menu():
     with st.container():
         url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
                'goal-target-idea-think-objective-64.png'
-        st.image(url1)
+        st.image('simple.png')
         st.write('1. Enter data')
         st.write('2. Save data')
         st.write('3. Analyze & get results')
