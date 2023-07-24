@@ -1,6 +1,5 @@
 import pandas as pd
 import streamlit as st
-from time import sleep
 
 
 
@@ -40,18 +39,7 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        if st.button('Upload data file'):
-            my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
-            sleep(2)
-            if my_file is not None:
-                if 'my_file' not in st.session_state:
-                    st.session_state.my_file = my_file
-
-                st.write(st.session_state)
-
-                df = pd.read_csv(my_file)
-
-                st.write(df)
+        st.button('Upload data file', on_click=upload_file())
 
 
 
@@ -335,23 +323,16 @@ def parameters():
 def upload_file():
     with st.container():
         # upload file containing internal and external parameters affecting the organization
-        # user_file = st.file_uploader('Upload your **parameters** file (.csv)',
-        #                              type=['csv'])
-        pass
-        # my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
-        #
-        # if my_file is not None:
-        #     if 'my_file' not in st.session_state:
-        #         st.session_state.my_file = my_file
-        #
-        #     st.write(st.session_state)
-        #
-        #     df = pd.read_csv(my_file)
-        #
-        #     st.write(df)
+        my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
+        if my_file is not None:
+            if 'my_file' not in st.session_state:
+                st.session_state.my_file = my_file
 
+            st.write(st.session_state)
 
+            df = pd.read_csv(my_file)
 
+            st.write(df)
 
 
 def explanation():
