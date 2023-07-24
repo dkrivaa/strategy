@@ -47,7 +47,9 @@ def home_menu():
                                          type=['csv'])
             if 'user_file' not in st.session_state:
                 st.session_state.user_file = user_file
-            upload_file()
+            st.write(st.session_state)
+
+            # upload_file()
 
 
 def data_external():
@@ -367,8 +369,6 @@ def explanation():
 
 def edit_data():
     # Defining df - from uploaded file or from data entering
-    st.write(st.session_state)
-
     if 'df' in st.session_state:
         df = st.session_state.df
     else:
