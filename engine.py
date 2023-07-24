@@ -43,9 +43,11 @@ def home_menu():
         if st.button('Upload data file', key='loadup_button'):
             if 'loadup_button' not in st.session_state:
                 st.session_state.loadup_button = True
-            try:
-                upload_file()
-            except: pass
+            user_file = st.file_uploader('Upload your **parameters** file (.csv)',
+                                         type=['csv'])
+            if 'user_file' not in st.session_state:
+                st.session_state.user_file = user_file
+            upload_file()
 
 
 def data_external():
@@ -324,14 +326,13 @@ def parameters():
 def upload_file():
     with st.container():
         # upload file containing internal and external parameters affecting the organization
-        user_file = st.file_uploader('Upload your **parameters** file (.csv)',
-                                     type=['csv'])
+        # user_file = st.file_uploader('Upload your **parameters** file (.csv)',
+        #                              type=['csv'])
 
-        if st.session_state.loadup_button:
-            df = pd.read_csv(user_file)
+        if st.session_state.user_file:
+            df = pd.read_csv(st.session_state.user_file)
             if 'df' not in st.session_state:
                 st.session_state.df = df
-        st.write(st.session_state)
 
 
 
@@ -366,6 +367,8 @@ def explanation():
 
 def edit_data():
     # Defining df - from uploaded file or from data entering
+    st.write(st.session_state)
+
     if 'df' in st.session_state:
         df = st.session_state.df
     else:
