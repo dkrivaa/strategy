@@ -22,14 +22,14 @@ def icon():
 
 
 def home_menu():
-    with st.container():
-        url1 = 'https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/arrow_right-64.png'
-        st.image(url1)
-
-        st.markdown(f'<span style="color: #4b7fd1; '
-                    f'font-size: 18px"><b>Data  **  Analyze  **  Results</b></span>'
-                    , unsafe_allow_html=True)
-    st.markdown('___')
+    # with st.container():
+    #     url1 = 'https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/arrow_right-64.png'
+    #     st.image(url1)
+    #
+    #     st.markdown(f'<span style="color: #4b7fd1; '
+    #                 f'font-size: 18px"><b>Data  **  Analyze  **  Results</b></span>'
+    #                 , unsafe_allow_html=True)
+    # st.markdown('___')
 
     with st.container():
         url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
