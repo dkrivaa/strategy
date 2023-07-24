@@ -14,3 +14,5 @@ st.markdown('___')
 
 engine.edit_data()
 
+engine.save_file()
+

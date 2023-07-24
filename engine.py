@@ -40,7 +40,7 @@ def home_menu():
 
         st.image(url3)
         upload_file()
-    st.write(st.session_state)
+
     save_file()
 
 
@@ -404,8 +404,6 @@ def edit_data():
         st.warning('There is no data. Please enter data on relevant pages')
 
     st.write(df)
-
-    st.write(st.session_state)
 
 
 
