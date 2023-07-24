@@ -370,6 +370,8 @@ def edit_data():
     if df.shape == (0, 0):
         st.warning('There is no data. Please enter data on relevant pages')
 
+    st.write(df)
+
 
 
 
