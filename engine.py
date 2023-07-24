@@ -41,16 +41,7 @@ def home_menu():
 
         st.image(url3)
         if st.button('Upload data file'):
-            user_file = st.file_uploader('Upload your **parameters** file (.csv)',
-                                         type=['csv'])
-            if user_file is not None:
-                if 'user_file' not in st.session_state:
-                    st.session_state.user_file = user_file
-                st.write(st.session_state)
-
-
-
-            # upload_file()
+            upload_file()
 
 
 def data_external():
@@ -331,11 +322,18 @@ def upload_file():
         # upload file containing internal and external parameters affecting the organization
         # user_file = st.file_uploader('Upload your **parameters** file (.csv)',
         #                              type=['csv'])
+        my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
 
-        if st.session_state.user_file:
-            df = pd.read_csv(st.session_state.user_file)
-            if 'df' not in st.session_state:
-                st.session_state.df = df
+        if my_file is not None:
+            if 'my_file' not in st.session_state:
+                st.session_state.my_file = my_file
+
+            st.write(st.session_state)
+
+            df = pd.read_csv(my_file)
+
+            st.write(df)
+
 
 
 

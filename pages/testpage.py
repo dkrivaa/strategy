@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
 
-my_file = st.file_uploader('Upload your **parameters** file (.csv)',type=['csv'])
+my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
 
 if my_file is not None:
     if 'my_file' not in st.session_state:
