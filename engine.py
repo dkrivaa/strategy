@@ -45,7 +45,8 @@ def home_menu():
                 st.session_state.loadup_button = True
             user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                          type=['csv'])
-            test = pd.read_csv(user_file)
+            if user_file is not None:
+                test = pd.read_csv(user_file)
             st.write(test)
             if 'user_file' not in st.session_state:
                 st.session_state.user_file = user_file
