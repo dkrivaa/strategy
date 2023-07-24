@@ -389,10 +389,8 @@ def edit_data():
                                                 options=range(0, 100, 5)),
                                             'prob_high': st.column_config.SelectboxColumn(
                                                 options=range(0, 100, 5)),
-                                           'influencer1': st.column_config.TextColumn(),
-                                           'influencer2': st.column_config.TextColumn(),
-                                           'influencer3': st.column_config.TextColumn(),},
-                                           hide_index=True)
+                                            },
+                                     hide_index=True)
 
 
 # ABOUT
