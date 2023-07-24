@@ -405,6 +405,8 @@ def edit_data():
 
     st.write(df)
 
+    st.write(st.session_state)
+
 
 
 
