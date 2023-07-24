@@ -24,9 +24,9 @@ def icon():
 def home_menu():
     with st.container():
         cols = st.columns([1, 1, 1, 4])
-        cols[0].st.button('**Data**')
-        cols[1].st.button('**Analyze**')
-        cols[2].st.button('**Results**')
+        cols[0].st.button('Data')
+        cols[1].st.button('Analyze')
+        cols[2].st.button('Results')
 
         # url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
         #        'goal-target-idea-think-objective-64.png'
