@@ -42,6 +42,16 @@ def home_menu():
         upload_file()
 
 
+def save_file():
+    # Function to save and download datafile in csv format
+    df = st.session_state.df
+    csv = df.to_csv(index=False)
+
+    st.sidebar.download_button('Press to download',
+                               data=csv,
+                               file_name='my_data.csv',)
+
+
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
