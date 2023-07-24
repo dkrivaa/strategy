@@ -49,6 +49,8 @@ def home_menu():
                 st.session_state.user_file = user_file
             st.write(st.session_state)
 
+        st.write(st.session_state)
+
             # upload_file()
 
 
