@@ -46,12 +46,16 @@ def home_menu():
 
 def save_file():
     # Function to save and download datafile in csv format
-    df = st.session_state.df
-    csv = df.to_csv(index=False)
+    if 'df' in st.session_state:
+        df = st.session_state.df
+        csv = df.to_csv(index=False)
 
-    st.sidebar.download_button('Press to download',
-                               data=csv,
-                               file_name='my_data.csv',)
+        st.sidebar.download_button('Press to download',
+                                   data=csv,
+                                   file_name='my_data.csv',)
+
+    else:
+        pass
 
 
 def data_external():
