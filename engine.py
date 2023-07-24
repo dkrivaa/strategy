@@ -40,7 +40,7 @@ def home_menu():
 
         st.image(url3)
         upload_file()
-        st.empty(st.session_state)
+        # st.write(st.session_state)
     save_file()
 
 
