@@ -50,7 +50,8 @@ def home_menu():
             st.write(st.session_state)
 
         st.write(st.session_state)
-        st.write(pd.read_csv(user_file))
+        test = pd.read_csv(user_file)
+        st.write(test)
 
             # upload_file()
 
