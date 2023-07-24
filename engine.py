@@ -51,7 +51,7 @@ def save_file():
         csv = df.to_csv(index=False)
 
         st.sidebar.markdown(f'<span style="color: #4b7fd1; '
-                    f'font-size: 18px"><b>Download and save data</b></span>'
+                    f'font-size: 16px"><b>Download and save data</b></span>'
                     , unsafe_allow_html=True)
         st.sidebar.download_button('Press to download',
                                    data=csv,
