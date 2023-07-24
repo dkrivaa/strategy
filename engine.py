@@ -158,6 +158,9 @@ def data_external():
         st.session_state.dfe = dfe
     else:
         st.session_state.dfe = dfe
+
+    parameters()
+
     return dfe
 
 
@@ -261,7 +264,11 @@ def data_internal():
         st.session_state.dfi = dfi
     else:
         st.session_state.dfi = dfi
+
+    parameters()
+
     return dfi
+
 
 
 def initial_dfe():
@@ -327,6 +334,12 @@ def parameters():
     else:
         df = None
         st.warning('Something is wrong')
+
+    if df != None:
+        if 'df' not in st.session_state:
+            st.session_state.df = df
+        elif 'df' in st.session_state:
+            st.session_state.df = df
 
     return df
 
