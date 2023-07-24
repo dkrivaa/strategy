@@ -37,7 +37,7 @@ def home_menu():
     #     st.write('1. Data')
     #     st.write('2. Analyze')
     #     st.write('3. Results')
-    # st.markdown('___')
+    st.markdown('___')
 
     with st.container():
         url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
