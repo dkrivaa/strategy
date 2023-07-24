@@ -406,7 +406,8 @@ def edit_data():
 
     st.data_editor(data=df, column_config={'significance':
                                            st.column_config.SelectboxColumn('significance',
-                                                options=['low', 'average', 'above average', 'high'])})
+                                                options=['low', 'average', 'above average', 'high'])},
+                   hide_index=True)
 
 
 
