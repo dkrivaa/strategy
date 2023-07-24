@@ -404,12 +404,14 @@ def edit_data():
     if df.shape == (0, 0):
         st.warning('There is no data. Please enter data on relevant pages')
 
-    st.data_editor(data=df, column_config={'significance': st.column_config.SelectboxColumn(
+    st.data_editor(data=df, column_config={'parameter': st.column_config.TextColumn(),
+                                            'significance': st.column_config.SelectboxColumn(
                                                'significance',
                                                options=['low', 'average', 'above average', 'high']),
                                             'prob_low': st.column_config.SelectboxColumn(
-                                                options=range(0, 100, 5)
-                                            )},
+                                                options=range(0, 100, 5)),
+                                            'prob_high': st.column_config.SelectboxColumn(
+                                                options=range(0, 100, 5)),},
 
 
                                            hide_index=True)
