@@ -43,7 +43,9 @@ def home_menu():
         if st.button('Upload data file', key='loadup_button'):
             if 'loadup_button' not in st.session_state:
                 st.session_state.loadup_button = True
-            upload_file()
+            try:
+                upload_file()
+            except: pass
 
 
 def data_external():
