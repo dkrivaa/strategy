@@ -24,7 +24,7 @@ def icon():
 def home_menu():
     with st.container():
         st.markdown(f'<span style="color: #4b7fd1; '
-                    f'font-size: 18px"><b>Data    Analyze    Results</b></span>'
+                    f'font-size: 18px"><b>Data  **  Analyze  **  Results</b></span>'
                     , unsafe_allow_html=True)
     #     col1, col2, col3, col4 = st.columns([1, 1, 1, 8])
     #     col1.button('Data')
