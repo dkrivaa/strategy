@@ -270,7 +270,6 @@ def data_internal():
     return dfi
 
 
-
 def initial_dfe():
     dfe = pd.DataFrame({'parameter': [],
                         'significance': [],
@@ -280,6 +279,7 @@ def initial_dfe():
                         'influencer2': [],
                         'influencer3': []})
     return dfe
+
 
 def initial_dfi():
     dfi = pd.DataFrame({'parameter': [],
@@ -364,6 +364,7 @@ def upload_file():
             else:
                 st.warning('Your file is not in the correct layout')
 
+
 def explanation():
     # This function presents the info on the 'About' page
     with st.container():
@@ -403,7 +404,8 @@ def edit_data():
     if df.shape == (0, 0):
         st.warning('There is no data. Please enter data on relevant pages')
 
-    st.write(df)
+    st.data_editor(data=df,
+                   )
 
 
 
