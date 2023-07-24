@@ -3,8 +3,6 @@ import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
 
 
-
-
 def home_title():
     # This function sets the generale outlay of page and the top banner
     url = icon()
