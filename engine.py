@@ -330,6 +330,8 @@ def upload_file():
             if 'df' not in st.session_state:
                 st.session_state.df = df
 
+            st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
+
 
 def explanation():
     # This function presents the info on the 'About' page
