@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
 
-
+# TITLES AND HOME
 def home_title():
     # This function sets the generale outlay of page and the top banner
     url = icon()
@@ -62,6 +62,7 @@ def save_file():
         pass
 
 
+# ENTERING, UPLOADING AND EDITING DATA
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
@@ -369,6 +370,32 @@ def upload_file():
                 st.warning('Your file is not in the correct layout')
 
 
+def edit_data():
+    # Defining df - from uploaded file or from data entering
+    if 'df' in st.session_state:
+        df = st.session_state.df
+    else:
+        df = parameters()
+
+    # if df is empty
+    if df.shape == (0, 0):
+        st.warning('There is no data. Please enter data on relevant pages')
+
+    st.data_editor(data=df, column_config={'parameter': st.column_config.TextColumn(),
+                                            'significance': st.column_config.SelectboxColumn(
+                                               'significance',
+                                               options=['average', 'above average', 'high', 'very high']),
+                                            'prob_low': st.column_config.SelectboxColumn(
+                                                options=range(0, 100, 5)),
+                                            'prob_high': st.column_config.SelectboxColumn(
+                                                options=range(0, 100, 5)),
+                                           'influencer1': st.column_config.TextColumn(),
+                                           'influencer2': st.column_config.TextColumn(),
+                                           'influencer3': st.column_config.TextColumn(),},
+                                           hide_index=True)
+
+
+# ABOUT
 def explanation():
     # This function presents the info on the 'About' page
     with st.container():
@@ -395,35 +422,6 @@ def explanation():
                  'that can influence the ability to cope with / exploit the challenges and '
                  'opportunities presented by the external and internal parameters.')
         st.markdown('___')
-
-
-def edit_data():
-    # Defining df - from uploaded file or from data entering
-    if 'df' in st.session_state:
-        df = st.session_state.df
-    else:
-        df = parameters()
-
-    # if df is empty
-    if df.shape == (0, 0):
-        st.warning('There is no data. Please enter data on relevant pages')
-
-    st.data_editor(data=df, column_config={'parameter': st.column_config.TextColumn(),
-                                            'significance': st.column_config.SelectboxColumn(
-                                               'significance',
-                                               options=['average', 'above average', 'high', 'very high']),
-                                            'prob_low': st.column_config.SelectboxColumn(
-                                                options=range(0, 100, 5)),
-                                            'prob_high': st.column_config.SelectboxColumn(
-                                                options=range(0, 100, 5)),
-                                           'influencer1': st.column_config.TextColumn(),
-                                           'influencer2': st.column_config.TextColumn(),
-                                           'influencer3': st.column_config.TextColumn(),},
-                                           hide_index=True)
-
-
-
-
 
 
 
