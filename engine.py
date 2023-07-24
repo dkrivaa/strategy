@@ -43,11 +43,11 @@ def home_menu():
         if st.button('Upload data file'):
             # user_file = st.file_uploader('Upload your **parameters** file (.csv)',
             #                              type=['csv'])
-            test = pd.read_csvst.file_uploader('Upload your **parameters** file (.csv)',
-                                         type=['csv'])
+            test = pd.read_csv(st.file_uploader('Upload your **parameters** file (.csv)',
+                                         type=['csv']))
             st.write(test)
-            if 'user_file' not in st.session_state:
-                st.session_state.user_file = user_file
+            if 'test' not in st.session_state:
+                st.session_state.test = test
             st.write(st.session_state)
 
         st.write(st.session_state)
