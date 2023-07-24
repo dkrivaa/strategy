@@ -40,7 +40,9 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        if st.button('Upload data file'):
+        if st.button('Upload data file', key='loadup_button'):
+            if 'loadup_button' not in st.session_state:
+                st.session_state.loadup_button = True
             upload_file()
 
 
@@ -322,12 +324,14 @@ def upload_file():
         # upload file containing internal and external parameters affecting the organization
         user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                      type=['csv'])
-        if 'user_file' not in st.session_state:
-            st.session_state.user_file = user_file
-        df = pd.read_csv(st.session_state.user_file)
-        if 'df' not in st.session_state:
-            st.session_state.df = df
+
+        if st.session_state.loadup_button:
+            df = pd.read_csv(user_file)
+            if 'df' not in st.session_state:
+                st.session_state.df = df
         st.write(st.session_state)
+
+
 
 
 def explanation():
@@ -365,6 +369,7 @@ def edit_data():
     else:
         df = parameters()
 
+    # if df is empty
     if df.shape == (0, 0):
         st.warning('There is no data. Please enter data on relevant pages')
 
