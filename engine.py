@@ -22,19 +22,19 @@ def icon():
 
 
 def home_menu():
-    with st.container():
-        col1, col2, col3, col4 = st.columns([1, 1, 1, 8])
-        col1.button('Data')
-        col2.button('Analyze')
-        col3.button('Results')
-
-        # url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
-        #        'goal-target-idea-think-objective-64.png'
-        # st.image(url1)
-        # st.write('1. Data')
-        # st.write('2. Analyze')
-        # st.write('3. Results')
-    st.markdown('___')
+    # with st.container():
+    #     col1, col2, col3, col4 = st.columns([1, 1, 1, 8])
+    #     col1.button('Data')
+    #     col2.button('Analyze')
+    #     col3.button('Results')
+    #
+    #     url1 = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
+    #            'goal-target-idea-think-objective-64.png'
+    #     st.image(url1)
+    #     st.write('1. Data')
+    #     st.write('2. Analyze')
+    #     st.write('3. Results')
+    # st.markdown('___')
 
     with st.container():
         url2 = 'https://cdn1.iconfinder.com/data/icons/unicons-line-vol-3/24/edit-48.png'
