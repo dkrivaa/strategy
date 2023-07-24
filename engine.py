@@ -42,11 +42,6 @@ def home_menu():
         upload_file()
 
 
-
-
-            # upload_file()
-
-
 def data_external():
     # This function enables the user to enter data -
     # external variables affecting the organization
@@ -326,12 +321,19 @@ def upload_file():
         my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
         if my_file is not None:
 
+            # Make dataframe from uploaded file
             df = pd.read_csv(my_file)
             if 'df' not in st.session_state:
                 st.session_state.df = df
 
-            st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
-
+            # checking to make sure uploaded file is ok
+            column_list = df.columns.tolist()
+            if column_list == ['parameter', 'significance', 'prob_low',
+                              'prob_high', 'influencer1', 'influencer2', 'influencer3']:
+                if len(df) <= 10:
+                    st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
+            else:
+                st.warning('Your file is not in the correct layout')
 
 def explanation():
     # This function presents the info on the 'About' page
