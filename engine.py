@@ -70,7 +70,7 @@ def data_external():
         if parameter1 is None:
             parameter1 = 0
         significance1 = st.radio('**Significance** to organization',
-                                ['low', 'average', 'above average', 'high'],
+                                ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig1_e')
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob1_e')
@@ -83,7 +83,7 @@ def data_external():
         if parameter2 is None:
             parameter2 = 0
         significance2 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig2_e')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2_e')
@@ -96,7 +96,7 @@ def data_external():
         if parameter3 is None:
             parameter3 = 0
         significance3 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig3_e')
         probability3 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob3_e')
@@ -109,7 +109,7 @@ def data_external():
         if parameter4 is None:
             parameter4 = 0
         significance4 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig4_e')
         probability4 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob4_e')
@@ -122,7 +122,7 @@ def data_external():
         if parameter5 is None:
             parameter5 = 0
         significance5 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig5_e')
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob5_e')
@@ -176,7 +176,7 @@ def data_internal():
         if parameter1 is None:
             parameter1 = 0
         significance1 = st.radio('**Significance** to organization',
-                                ['low', 'average', 'above average', 'high'],
+                                ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig1_i')
         probability1 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob1_i')
@@ -189,7 +189,7 @@ def data_internal():
         if parameter2 is None:
             parameter2 = 0
         significance2 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig2_i')
         probability2 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob2_i')
@@ -202,7 +202,7 @@ def data_internal():
         if parameter3 is None:
             parameter3 = 0
         significance3 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig3_i')
         probability3 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob3_i')
@@ -215,7 +215,7 @@ def data_internal():
         if parameter4 is None:
             parameter4 = 0
         significance4 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig4_i')
         probability4 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob4_i')
@@ -228,7 +228,7 @@ def data_internal():
         if parameter5 is None:
             parameter5 = 0
         significance5 = st.radio('**Significance** to organization',
-                                 ['low', 'average', 'above average', 'high'],
+                                 ['average', 'above average', 'high', 'very high'],
                                  index=3, horizontal=True, key='sig5_i')
         probability5 = st.slider('**Probability**', min_value=0, max_value=100,
                                  step=5, value=(45, 55), key='prob5_i')
@@ -407,7 +407,7 @@ def edit_data():
     st.data_editor(data=df, column_config={'parameter': st.column_config.TextColumn(),
                                             'significance': st.column_config.SelectboxColumn(
                                                'significance',
-                                               options=['low', 'average', 'above average', 'high']),
+                                               options=['average', 'above average', 'high', 'very high']),
                                             'prob_low': st.column_config.SelectboxColumn(
                                                 options=range(0, 100, 5)),
                                             'prob_high': st.column_config.SelectboxColumn(
