@@ -40,13 +40,10 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        if st.button('Upload data file', key='loadup_button'):
-            if 'loadup_button' not in st.session_state:
-                st.session_state.loadup_button = True
+        if st.button('Upload data file'):
             user_file = st.file_uploader('Upload your **parameters** file (.csv)',
                                          type=['csv'])
-            if user_file is not None:
-                test = pd.read_csv(user_file)
+            test = pd.read_csv(user_file)
             st.write(test)
             if 'user_file' not in st.session_state:
                 st.session_state.user_file = user_file
