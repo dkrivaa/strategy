@@ -39,7 +39,7 @@ def home_menu():
             st.success("Press 'Enter External Parameters' on sidebar")
 
         st.image(url3)
-        st.button('Upload data file', on_click=upload_file())
+        upload_file()
 
 
 
