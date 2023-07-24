@@ -15,7 +15,6 @@ st.markdown('___')
 
 engine.home_menu()
 
-st.write(st.session_state)
 
 
 

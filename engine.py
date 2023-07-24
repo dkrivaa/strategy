@@ -42,7 +42,7 @@ def home_menu():
         st.image(url3)
         if st.button('Upload data file'):
             my_file = st.file_uploader('Upload your **parameters** file (.csv)', type=['csv'])
-
+            sleep(2)
             if my_file is not None:
                 if 'my_file' not in st.session_state:
                     st.session_state.my_file = my_file
