@@ -50,7 +50,7 @@ def save_file():
         df = st.session_state.df
         csv = df.to_csv(index=False)
 
-        st.sidebar.markdown(f'<span style="color: #4b7fd1; '
+        st.sidebar.markdown(f'<span style="color: #f0410c; '
                     f'font-size: 16px"><b>Download and save data</b></span>'
                     , unsafe_allow_html=True)
         st.sidebar.download_button('Press to download',
