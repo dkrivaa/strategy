@@ -152,7 +152,8 @@ def data_external():
                            influencer52]
             influencer3 = [influencer13, influencer23, influencer33, influencer43,
                            influencer53]
-            dfe = pd.DataFrame({'parameter': parameter,
+            dfe = pd.DataFrame({'enviroment': ['external', 'external', 'external', 'external', 'external'],
+                                'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
                                 'prob_high': prob_high,
@@ -263,7 +264,8 @@ def data_internal():
                            influencer52]
             influencer3 = [influencer13, influencer23, influencer33, influencer43,
                            influencer53]
-            dfi = pd.DataFrame({'parameter': parameter,
+            dfi = pd.DataFrame({'enviroment': ['internal', 'internal', 'internal', 'internal', 'internal'],
+                                'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
                                 'prob_high': prob_high,
@@ -275,7 +277,7 @@ def data_internal():
     else:
         st.session_state.dfi = dfi
 
-        # Adding dfi (internal parameters) if does not exist in session.state
+        # Adding dfe (internal parameters) if does not exist in session.state
         if 'dfe' not in st.session_state:
             dfe = initial_dfe()
             st.session_state.dfe = dfe
@@ -286,7 +288,8 @@ def data_internal():
 
 
 def initial_dfe():
-    dfe = pd.DataFrame({'parameter': ['None', 'None', 'None', 'None', 'None'],
+    dfe = pd.DataFrame({'enviroment': ['external', 'external', 'external', 'external', 'external'],
+                        'parameter': ['None', 'None', 'None', 'None', 'None'],
                         'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
                         'prob_low': [45, 45, 45, 45, 45],
                         'prob_high': [55, 55, 55, 55, 55],
@@ -297,7 +300,8 @@ def initial_dfe():
 
 
 def initial_dfi():
-    dfi = pd.DataFrame({'parameter': ['None', 'None', 'None', 'None', 'None'],
+    dfi = pd.DataFrame({'enviroment': ['internal', 'internal', 'internal', 'internal', 'internal'],
+                        'parameter': ['None', 'None', 'None', 'None', 'None'],
                         'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
                         'prob_low': [45, 45, 45, 45, 45],
                         'prob_high': [55, 55, 55, 55, 55],
