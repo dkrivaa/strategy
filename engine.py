@@ -282,9 +282,9 @@ def data_internal():
 
 def initial_dfe():
     dfe = pd.DataFrame({'parameter': [],
-                        'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
-                        'prob_low': [45, 45, 45, 45, 45],
-                        'prob_high': [55, 55, 55, 55, 55],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': [],
                         'influencer1': [],
                         'influencer2': [],
                         'influencer3': []})
@@ -293,9 +293,9 @@ def initial_dfe():
 
 def initial_dfi():
     dfi = pd.DataFrame({'parameter': [],
-                        'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
-                        'prob_low': [45, 45, 45, 45, 45],
-                        'prob_high': [55, 55, 55, 55, 55],
+                        'significance': [],
+                        'prob_low': [],
+                        'prob_high': [],
                         'influencer1': [],
                         'influencer2': [],
                         'influencer3': []})
