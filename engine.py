@@ -387,10 +387,10 @@ def upload_file():
 
             # checking to make sure uploaded file is ok
             column_list = df.columns.tolist()
-            if column_list == ['environment', 'parameter', 'significance', 'prob_low',
-                               'prob_high', 'influencer1', 'influencer2', 'influencer3']:
-                # if len(df) == 10:
-                    st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
+            # if column_list == ['environment', 'parameter', 'significance', 'prob_low',
+            #                    'prob_high', 'influencer1', 'influencer2', 'influencer3']:
+            if len(df) == 10:
+                st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
             else:
                 st.warning('Your file is not in the correct layout')
 
