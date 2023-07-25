@@ -387,7 +387,7 @@ def upload_file():
 
             # checking to make sure uploaded file is ok
             column_list = df.columns.tolist()
-            st.write(column_list)
+
             if column_list == ['environment', 'parameter', 'significance', 'prob_low',
                                'prob_high', 'influencer1', 'influencer2', 'influencer3']:
                 if len(df) == 10:
