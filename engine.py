@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
 
+
 # TITLES AND HOME
 def home_title():
     # This function sets the generale outlay of page and the top banner
@@ -172,6 +173,8 @@ def data_external():
 
     parameters()
 
+    st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
+
     return dfe
 
 
@@ -284,6 +287,8 @@ def data_internal():
 
     parameters()
 
+    st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
+
     return dfi
 
 
@@ -317,14 +322,16 @@ def parameters():
     if 'dfe' in st.session_state and 'dfi' in st.session_state:
         df = pd.concat([st.session_state['dfe'], st.session_state['dfi']], axis=0)
     elif 'dfe' not in st.session_state and 'dfi' not in st.session_state:
-        dfe = pd.DataFrame({'parameter': [],
+        dfe = pd.DataFrame({'environment': [],
+                            'parameter': [],
                             'significance': [],
                             'prob_low': [],
                             'prob_high': [],
                             'influencer1': [],
                             'influencer2': [],
                             'influencer3': []})
-        dfi = pd.DataFrame({'parameter': [],
+        dfi = pd.DataFrame({'environment': [],
+                            'parameter': [],
                             'significance': [],
                             'prob_low': [],
                             'prob_high': [],
@@ -333,7 +340,8 @@ def parameters():
                             'influencer3': []})
         df = pd.concat([dfe, dfi], axis=0)
     elif 'dfe' not in st.session_state and 'dfi' in st.session_state:
-        dfe = pd.DataFrame({'parameter': [],
+        dfe = pd.DataFrame({'environment': [],
+                            'parameter': [],
                             'significance': [],
                             'prob_low': [],
                             'prob_high': [],
@@ -342,7 +350,8 @@ def parameters():
                             'influencer3': []})
         df = pd.concat([dfe, st.session_state.dfi], axis=0)
     elif 'dfe' in st.session_state and 'dfi' not in st.session_state:
-        dfi = pd.DataFrame({'parameter': [],
+        dfi = pd.DataFrame({'environment': [],
+                            'parameter': [],
                             'significance': [],
                             'prob_low': [],
                             'prob_high': [],
@@ -378,9 +387,9 @@ def upload_file():
 
             # checking to make sure uploaded file is ok
             column_list = df.columns.tolist()
-            if column_list == ['parameter', 'significance', 'prob_low',
+            if column_list == ['environment', 'parameter', 'significance', 'prob_low',
                               'prob_high', 'influencer1', 'influencer2', 'influencer3']:
-                if len(df) <= 10:
+                if len(df) == 10:
                     st.success("Your file was uploaded successfully. To edit your data go to 'Edit data' page")
             else:
                 st.warning('Your file is not in the correct layout')
@@ -409,6 +418,8 @@ def edit_data():
                                      hide_index=True)
 
     st.session_state.df = df
+
+
 # ABOUT
 def explanation():
     # This function presents the info on the 'About' page
