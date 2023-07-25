@@ -395,7 +395,7 @@ def edit_data():
                                      hide_index=True)
 
 
-
+    st.session_state.df = df
 # ABOUT
 def explanation():
     # This function presents the info on the 'About' page
