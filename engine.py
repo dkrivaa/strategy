@@ -153,7 +153,7 @@ def data_external():
                            influencer52]
             influencer3 = [influencer13, influencer23, influencer33, influencer43,
                            influencer53]
-            dfe = pd.DataFrame({'enviroment': ['external', 'external', 'external', 'external', 'external'],
+            dfe = pd.DataFrame({'environment': ['external', 'external', 'external', 'external', 'external'],
                                 'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
@@ -267,7 +267,7 @@ def data_internal():
                            influencer52]
             influencer3 = [influencer13, influencer23, influencer33, influencer43,
                            influencer53]
-            dfi = pd.DataFrame({'enviroment': ['internal', 'internal', 'internal', 'internal', 'internal'],
+            dfi = pd.DataFrame({'environment': ['internal', 'internal', 'internal', 'internal', 'internal'],
                                 'parameter': parameter,
                                 'significance': significance,
                                 'prob_low': prob_low,
@@ -293,7 +293,7 @@ def data_internal():
 
 
 def initial_dfe():
-    dfe = pd.DataFrame({'enviroment': ['external', 'external', 'external', 'external', 'external'],
+    dfe = pd.DataFrame({'environment': ['external', 'external', 'external', 'external', 'external'],
                         'parameter': ['None', 'None', 'None', 'None', 'None'],
                         'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
                         'prob_low': [45, 45, 45, 45, 45],
@@ -305,7 +305,7 @@ def initial_dfe():
 
 
 def initial_dfi():
-    dfi = pd.DataFrame({'enviroment': ['internal', 'internal', 'internal', 'internal', 'internal'],
+    dfi = pd.DataFrame({'environment': ['internal', 'internal', 'internal', 'internal', 'internal'],
                         'parameter': ['None', 'None', 'None', 'None', 'None'],
                         'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
                         'prob_low': [45, 45, 45, 45, 45],
