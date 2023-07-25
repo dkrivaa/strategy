@@ -164,6 +164,10 @@ def data_external():
     else:
         st.session_state.dfe = dfe
 
+    if 'dfi' not in st.session_state:
+        dfi = initial_dfi()
+        st.session_state.dfi = dfi
+
     parameters()
 
     return dfe
