@@ -161,6 +161,8 @@ def data_external():
                                 'influencer1': influencer1,
                                 'influencer2': influencer2,
                                 'influencer3': influencer3})
+            st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
+
     if dfe not in st.session_state:
         st.session_state.dfe = dfe
     else:
@@ -173,7 +175,6 @@ def data_external():
 
     parameters()
 
-    st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
 
     return dfe
 
@@ -275,6 +276,8 @@ def data_internal():
                                 'influencer1': influencer1,
                                 'influencer2': influencer2,
                                 'influencer3': influencer3})
+            st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
+
     if 'dfi' not in st.session_state:
         st.session_state.dfi = dfi
     else:
@@ -286,8 +289,6 @@ def data_internal():
             st.session_state.dfe = dfe
 
     parameters()
-
-    st.success("Your data has been saved. You can see and edit data by going to 'Edit data' page")
 
     return dfi
 
