@@ -166,7 +166,7 @@ def data_external():
 
     # Adding dfi (internal parameters) if does not exist in session.state
     if 'dfi' not in st.session_state:
-        dfi = initial_dfi()
+        dfi = data_internal()
         st.session_state.dfi = dfi
 
     parameters()
