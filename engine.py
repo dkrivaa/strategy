@@ -275,19 +275,24 @@ def data_internal():
     else:
         st.session_state.dfi = dfi
 
+        # Adding dfi (internal parameters) if does not exist in session.state
+        if 'dfe' not in st.session_state:
+            dfe = initial_dfe()
+            st.session_state.dfe = dfe
+
     parameters()
 
     return dfi
 
 
 def initial_dfe():
-    dfe = pd.DataFrame({'parameter': [],
-                        'significance': [],
-                        'prob_low': [],
-                        'prob_high': [],
-                        'influencer1': [],
-                        'influencer2': [],
-                        'influencer3': []})
+    dfe = pd.DataFrame({'parameter': ['None', 'None', 'None', 'None', 'None'],
+                        'significance': ['very high', 'very high', 'very high', 'very high', 'very high'],
+                        'prob_low': [45, 45, 45, 45, 45],
+                        'prob_high': [55, 55, 55, 55, 55],
+                        'influencer1': ['None', 'None', 'None', 'None', 'None'],
+                        'influencer2': ['None', 'None', 'None', 'None', 'None'],
+                        'influencer3': ['None', 'None', 'None', 'None', 'None']})
     return dfe
 
 
