@@ -394,7 +394,6 @@ def edit_data():
                                             },
                                      hide_index=True)
 
-
     st.session_state.df = df
 # ABOUT
 def explanation():
