@@ -430,10 +430,12 @@ def analyze():
     else:
         st.warning('You need to enter your data in order to analyze your strategic position')
 
+    dfa = df
+
     for i in range(len(df)):
         my_list = ['average', 'above average', 'high', 'very high']
-        df['sig_code'] = my_list.index(df['significance'][i]) + 1
-        st.write(df['sig_code'][i])
+        dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
+
 
 
 
