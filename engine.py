@@ -432,7 +432,8 @@ def analyze():
 
     for i in range(len(df)):
         my_list = ['average', 'above average', 'high', 'very high']
-        st.write(df['significance'][i])
+        df['sig_code'] = my_list.index(df['significance'][i])
+        st.write(df['sig_code'][i])
 
 
 
