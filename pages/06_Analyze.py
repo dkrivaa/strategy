@@ -1,5 +1,4 @@
 import streamlit as st
-import plotly as pl
 
 import engine
 

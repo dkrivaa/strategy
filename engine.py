@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
-import plotly as pl
 
 # TITLES AND HOME
 def home_title():
@@ -436,8 +435,7 @@ def analyze():
         my_list = ['average', 'above average', 'high', 'very high']
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
 
-    fig = pl.scatter(dfa, x='prob_high', y='sig_code')
-    fig.show()
+
 
 
 
