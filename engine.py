@@ -423,13 +423,16 @@ def edit_data():
 
 
 # ANALYZE
-def graph():
+def analyze():
     # Checking if df is in st.session
     if 'df' in st.session_state:
         df = st.session_state.df
     else:
         st.warning('You need to enter your data in order to analyze your strategic position')
 
+    for i in range(len(df)):
+        my_list = ['average', 'above average', 'high', 'very high']
+        st.write(df.loc[df['significance'][i]])
 
 
 

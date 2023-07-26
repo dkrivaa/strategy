@@ -17,5 +17,5 @@ url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/' \
 
 st.image(url)
 
-engine.graph()
+engine.analyze()
 
