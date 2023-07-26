@@ -2,3 +2,4 @@ streamlit
 pandas
 streamlit_extras
 matplotlib
+pyplot
