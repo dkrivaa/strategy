@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
+import plotly.express as px
 
 # TITLES AND HOME
 def home_title():
@@ -435,6 +436,8 @@ def analyze():
         my_list = ['average', 'above average', 'high', 'very high']
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
 
+    fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
+    fig.show()
 
 
 
