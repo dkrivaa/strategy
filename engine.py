@@ -422,6 +422,20 @@ def edit_data():
     st.session_state.df = df
 
 
+# ANALYZE
+def graph():
+    if 'df' in st.session_state:
+        df = st.session_state.df
+    else:
+        st.warning('You need to enter your data in order to analyze your strategic position')
+
+
+
+
+
+
+
+
 # ABOUT
 def explanation():
     # This function presents the info on the 'About' page
