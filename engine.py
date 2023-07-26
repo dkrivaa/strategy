@@ -8,8 +8,9 @@ def home_title():
     # This function sets the generale outlay of page and the top banner
     url = icon()
     st.set_page_config(page_title='StraApp',
-                       layout='wide',
+
                        page_icon=url)
+    # layout='wide',
     st.image(url)
     st.markdown(f'<span style="color: #4b7fd1; '
                 f'font-size: 24px"><b>StraApp - Strategic Planning</b></span>'
@@ -424,6 +425,7 @@ def edit_data():
 
 # ANALYZE
 def graph():
+    # Checking if df is in st.session
     if 'df' in st.session_state:
         df = st.session_state.df
     else:
