@@ -437,8 +437,7 @@ def analyze():
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
 
     fig = px.bar(x=["a", "b", "c"], y=[1, 3, 2])
-    fig.show()
-
+    st.plotly_chart(fig, use_container_width=True)
 
 
 
