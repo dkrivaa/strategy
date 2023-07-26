@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 # from streamlit_extras.switch_page_button import switch_page
-import matplotlib.pyplot as plt
 
 
 # TITLES AND HOME
