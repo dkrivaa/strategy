@@ -432,7 +432,7 @@ def analyze():
 
     for i in range(len(df)):
         my_list = ['average', 'above average', 'high', 'very high']
-        st.write(df.loc[df['significance'][i]])
+        st.write(df['significance'][i])
 
 
 
