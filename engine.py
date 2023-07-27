@@ -442,7 +442,7 @@ def analyze():
         y=altair.Y('prob_low', ).scale(zero=False),
 
         color='parameter',
-        size=altair.Size('significance', 50, title='test'),
+        size=altair.Size('significance', title='test'),
         )
     st.altair_chart(c, use_container_width=True)
 
