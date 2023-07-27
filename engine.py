@@ -440,8 +440,8 @@ def analyze():
 
     c = altair.Chart(dfa).mark_point().encode(
         x='prob_high',
-        y=dfa['sig_code'],
-        size=dfa['sig_code']
+        y='sig_code',
+        size='sig_code'
         )
     st.altair_chart(c, use_container_width=True)
 
