@@ -441,6 +441,7 @@ def analyze():
     c = altair.Chart(dfa).mark_circle().encode(
         x='prob_high',
         y='parameter',
+        color='significance'
         size=altair.Size('significance', title='test')
         )
     st.altair_chart(c, use_container_width=True)
