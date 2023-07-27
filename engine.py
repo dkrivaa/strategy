@@ -436,7 +436,6 @@ def analyze():
     for i in range(len(df)):
         my_list = ['average', 'above average', 'high', 'very high']
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
-    st.write(dfa)
 
     c = altair.Chart(dfa).mark_circle().encode(
         x='prob_high',
