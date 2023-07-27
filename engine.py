@@ -437,6 +437,12 @@ def analyze():
         my_list = ['average', 'above average', 'high', 'very high']
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
 
+    c = altair.Chart(dfa).mark_point().encode(
+        x='prob_high',
+        y='sig_code'
+        )
+    st.altair_chart(c, use_container_width=True)
+
 
 
 
