@@ -438,7 +438,7 @@ def analyze():
         dfa['sig_code'] = my_list.index(dfa['significance'][i]) + 1
 
     c = altair.Chart(dfa).mark_circle().encode(
-        x=altair.X('prob_high', ),
+        x=altair.X('prob_high', ).scale(zero=False),
         y='parameter',
 
         color='significance',
