@@ -6,7 +6,7 @@ import altair
 
 # TITLES AND HOME
 def home_title():
-    # This function sets the generale outlay of page and the top banner
+    # This function sets the general layout of page and the top banner
     url = icon()
     st.set_page_config(page_title='StraApp',
                        layout='wide',
